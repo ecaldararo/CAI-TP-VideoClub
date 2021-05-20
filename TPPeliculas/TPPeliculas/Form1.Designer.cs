@@ -47,7 +47,6 @@ namespace PrimerForm
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label3 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.peliculasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,6 +62,7 @@ namespace PrimerForm
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -224,14 +224,6 @@ namespace PrimerForm
             this.splitContainer1.SplitterDistance = 283;
             this.splitContainer1.TabIndex = 25;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(118, 28);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(210, 26);
-            this.comboBox1.TabIndex = 25;
-            // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -260,13 +252,13 @@ namespace PrimerForm
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarToolStripMenuItem.Text = "Consultar";
             // 
             // ingresarToolStripMenuItem
             // 
             this.ingresarToolStripMenuItem.Name = "ingresarToolStripMenuItem";
-            this.ingresarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.ingresarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ingresarToolStripMenuItem.Text = "Ingresar";
             // 
             // préstamosToolStripMenuItem
@@ -345,6 +337,14 @@ namespace PrimerForm
             this.ingresarToolStripMenuItem3.Name = "ingresarToolStripMenuItem3";
             this.ingresarToolStripMenuItem3.Size = new System.Drawing.Size(125, 22);
             this.ingresarToolStripMenuItem3.Text = "Ingresar";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(68, 30);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(210, 26);
+            this.comboBox1.TabIndex = 25;
             // 
             // Form1
             // 
