@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VideoClubApp
+namespace VideoClubApp.Forms
 {
-    public partial class Form1 : Form
+    public partial class FormPeliculas : Form
     {
-        public Form1()
+        public FormPeliculas()
         {
             InitializeComponent();
         }
