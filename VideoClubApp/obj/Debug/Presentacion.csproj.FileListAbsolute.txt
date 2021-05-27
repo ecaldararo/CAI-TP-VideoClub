@@ -1,0 +1,12 @@
+H:\Escritorio\GitHub\CAI-TP-Peliculas\ecaldararo\CAI-TP-VideoClub\VideoClubApp\bin\Debug\VideoClubApp.exe.config
+H:\Escritorio\GitHub\CAI-TP-Peliculas\ecaldararo\CAI-TP-VideoClub\VideoClubApp\bin\Debug\VideoClubApp.exe
+H:\Escritorio\GitHub\CAI-TP-Peliculas\ecaldararo\CAI-TP-VideoClub\VideoClubApp\bin\Debug\VideoClubApp.pdb
+H:\Escritorio\GitHub\CAI-TP-Peliculas\ecaldararo\CAI-TP-VideoClub\VideoClubApp\obj\Debug\Presentacion.csprojAssemblyReference.cache
+H:\Escritorio\GitHub\CAI-TP-Peliculas\ecaldararo\CAI-TP-VideoClub\VideoClubApp\obj\Debug\VideoClubApp.FormPrincipal.resources
+H:\Escritorio\GitHub\CAI-TP-Peliculas\ecaldararo\CAI-TP-VideoClub\VideoClubApp\obj\Debug\VideoClubApp.Forms.FormClientes.resources
+H:\Escritorio\GitHub\CAI-TP-Peliculas\ecaldararo\CAI-TP-VideoClub\VideoClubApp\obj\Debug\VideoClubApp.Forms.FormPeliculas.resources
+H:\Escritorio\GitHub\CAI-TP-Peliculas\ecaldararo\CAI-TP-VideoClub\VideoClubApp\obj\Debug\VideoClubApp.Properties.Resources.resources
+H:\Escritorio\GitHub\CAI-TP-Peliculas\ecaldararo\CAI-TP-VideoClub\VideoClubApp\obj\Debug\Presentacion.csproj.GenerateResource.cache
+H:\Escritorio\GitHub\CAI-TP-Peliculas\ecaldararo\CAI-TP-VideoClub\VideoClubApp\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+H:\Escritorio\GitHub\CAI-TP-Peliculas\ecaldararo\CAI-TP-VideoClub\VideoClubApp\obj\Debug\VideoClubApp.exe
+H:\Escritorio\GitHub\CAI-TP-Peliculas\ecaldararo\CAI-TP-VideoClub\VideoClubApp\obj\Debug\VideoClubApp.pdb
