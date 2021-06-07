@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VideoClubApp.Forms;
 
 namespace VideoClubApp
 {
     public partial class FormPrincipal : Form
     {
         private Form formActivo;
+        private Form formPeliculas;
+        private Form formPrestamos;
+        private Form formClientes;
         public FormPrincipal()
         {
             InitializeComponent();
@@ -36,6 +40,29 @@ namespace VideoClubApp
         }
 
         private void botonPrestamos_Click(object sender, EventArgs e)
+        {
+            //formPrestamos = new FormPrestamos();
+            //abrirFormInteractivo(formPrestamos, sender);
+        }
+
+        private void panelInteraccion_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void botonPeliculas_Click(object sender, EventArgs e)
+        {
+            formPeliculas = new FormPeliculas();
+            abrirFormInteractivo(formPeliculas, sender);
+        }
+
+        private void botonClientes_Click(object sender, EventArgs e)
+        {
+            formClientes = new FormClientes();
+            abrirFormInteractivo(formClientes, sender);
+        }
+
+        private void tituloPrincipal_Click(object sender, EventArgs e)
         {
 
         }
