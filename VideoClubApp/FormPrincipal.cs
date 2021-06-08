@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VideoClubApp.Forms;
+using Negocio;
+using Entidades;
 
 namespace VideoClubApp
 {
@@ -17,6 +19,8 @@ namespace VideoClubApp
         private Form formPeliculas;
         private Form formPrestamos;
         private Form formClientes;
+
+        private AdmCliente _admCliente;
         public FormPrincipal()
         {
             InitializeComponent();

@@ -29,22 +29,23 @@ namespace VideoClubApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.botonPeliculas = new System.Windows.Forms.Button();
             this.botonPrestamos = new System.Windows.Forms.Button();
             this.botonClientes = new System.Windows.Forms.Button();
             this.botonReportes = new System.Windows.Forms.Button();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.tituloPrincipal = new System.Windows.Forms.Label();
             this.panelInteraccion = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelIzquierdo.SuspendLayout();
             this.panelSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
             // botonPeliculas
             // 
-            this.botonPeliculas.BackColor = System.Drawing.SystemColors.Control;
+            this.botonPeliculas.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.botonPeliculas.Font = new System.Drawing.Font("Oswald", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonPeliculas.Location = new System.Drawing.Point(3, 92);
             this.botonPeliculas.Margin = new System.Windows.Forms.Padding(4);
@@ -52,11 +53,12 @@ namespace VideoClubApp
             this.botonPeliculas.Size = new System.Drawing.Size(212, 64);
             this.botonPeliculas.TabIndex = 17;
             this.botonPeliculas.Text = "Películas";
-            this.botonPeliculas.UseVisualStyleBackColor = true;
+            this.botonPeliculas.UseVisualStyleBackColor = false;
             this.botonPeliculas.Click += new System.EventHandler(this.botonPeliculas_Click);
             // 
             // botonPrestamos
             // 
+            this.botonPrestamos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.botonPrestamos.Font = new System.Drawing.Font("Oswald", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonPrestamos.Location = new System.Drawing.Point(3, 164);
             this.botonPrestamos.Margin = new System.Windows.Forms.Padding(4);
@@ -64,11 +66,12 @@ namespace VideoClubApp
             this.botonPrestamos.Size = new System.Drawing.Size(212, 62);
             this.botonPrestamos.TabIndex = 18;
             this.botonPrestamos.Text = "Préstamos";
-            this.botonPrestamos.UseVisualStyleBackColor = true;
+            this.botonPrestamos.UseVisualStyleBackColor = false;
             this.botonPrestamos.Click += new System.EventHandler(this.botonPrestamos_Click);
             // 
             // botonClientes
             // 
+            this.botonClientes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.botonClientes.Font = new System.Drawing.Font("Oswald", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonClientes.Location = new System.Drawing.Point(3, 234);
             this.botonClientes.Margin = new System.Windows.Forms.Padding(4);
@@ -76,11 +79,12 @@ namespace VideoClubApp
             this.botonClientes.Size = new System.Drawing.Size(212, 62);
             this.botonClientes.TabIndex = 21;
             this.botonClientes.Text = "Clientes";
-            this.botonClientes.UseVisualStyleBackColor = true;
+            this.botonClientes.UseVisualStyleBackColor = false;
             this.botonClientes.Click += new System.EventHandler(this.botonClientes_Click);
             // 
             // botonReportes
             // 
+            this.botonReportes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.botonReportes.Font = new System.Drawing.Font("Oswald", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonReportes.Location = new System.Drawing.Point(3, 304);
             this.botonReportes.Margin = new System.Windows.Forms.Padding(4);
@@ -88,11 +92,13 @@ namespace VideoClubApp
             this.botonReportes.Size = new System.Drawing.Size(212, 62);
             this.botonReportes.TabIndex = 20;
             this.botonReportes.Text = "Reportes";
-            this.botonReportes.UseVisualStyleBackColor = true;
+            this.botonReportes.UseVisualStyleBackColor = false;
             // 
             // panelIzquierdo
             // 
-            this.panelIzquierdo.BackColor = System.Drawing.SystemColors.Window;
+            this.panelIzquierdo.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.panelIzquierdo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelIzquierdo.BackgroundImage")));
+            this.panelIzquierdo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelIzquierdo.Controls.Add(this.label1);
             this.panelIzquierdo.Controls.Add(this.botonPrestamos);
             this.panelIzquierdo.Controls.Add(this.botonPeliculas);
@@ -101,8 +107,20 @@ namespace VideoClubApp
             this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
             this.panelIzquierdo.Name = "panelIzquierdo";
-            this.panelIzquierdo.Size = new System.Drawing.Size(222, 625);
+            this.panelIzquierdo.Size = new System.Drawing.Size(222, 567);
             this.panelIzquierdo.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Oswald", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(39, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(144, 51);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "VideoClub";
             // 
             // panelSuperior
             // 
@@ -129,25 +147,15 @@ namespace VideoClubApp
             this.panelInteraccion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInteraccion.Location = new System.Drawing.Point(222, 69);
             this.panelInteraccion.Name = "panelInteraccion";
-            this.panelInteraccion.Size = new System.Drawing.Size(994, 556);
+            this.panelInteraccion.Size = new System.Drawing.Size(994, 498);
             this.panelInteraccion.TabIndex = 24;
             this.panelInteraccion.Paint += new System.Windows.Forms.PaintEventHandler(this.panelInteraccion_Paint);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Oswald", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 51);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "VideoClub";
             // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1216, 625);
+            this.ClientSize = new System.Drawing.Size(1216, 567);
             this.Controls.Add(this.panelInteraccion);
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.panelIzquierdo);
