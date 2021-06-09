@@ -28,9 +28,20 @@ namespace Negocio
             return _clientes;
 
         }
+        public List<Cliente> TraerTodosOrdenadosPorId()
+        {
+            //_clientes = TraerTodos(); // Consulta al servidor al cargar el formulario, y lo guarda y trabaja sobre ese.
+
+            List<Cliente> clientesOrdenadosPorId = new List<Cliente>();
+
+            clientesOrdenadosPorId = _clientes.OrderByDescending(x => x.Id).ToList();
+
+            return clientesOrdenadosPorId;
+
+        }
         public List<Cliente> TraerPorDNI(int dni)
         {
-            _clientes = _clientMapper.TraerTodos();
+            //_clientes = _clientMapper.TraerTodos(); // Consulta al servidor al cargar el formulario, y lo guarda y trabaja sobre ese.
 
             List<Cliente> _clientesFiltrados = new List<Cliente>();
 
@@ -47,7 +58,7 @@ namespace Negocio
 
         public List<Cliente> TraerPorApellido(string apellido)
         {
-            _clientes = _clientMapper.TraerTodos();
+            // _clientes = _clientMapper.TraerTodos(); // Consulta al servidor al cargar el formulario, y lo guarda y trabaja sobre ese.
 
             List<Cliente> _clientesFiltrados = new List<Cliente>();
 
@@ -62,16 +73,30 @@ namespace Negocio
 
         }
 
-        public TransactionResult Agregar(int dni,string nombre, string apellido,string direccion, DateTime fechaNac)
+        public TransactionResult Agregar(int dni,string nombre, string apellido,string direccion, DateTime fechaNac, bool activo)
         {
             Cliente nuevoCliente = new Cliente();
             nuevoCliente.Dni = dni;
             nuevoCliente.Nombre = nombre;
-            nuevoCliente.Apellido = apellido;
+            nuevoCliente.Apellido = apellido;   
             nuevoCliente.Direccion = direccion;
             nuevoCliente.FechaNacimiento = fechaNac;
+            nuevoCliente.Activo = activo;
 
             return _clientMapper.Insertar(nuevoCliente);
+        }
+
+        public TransactionResult Modificar(Cliente clienteAModificar)
+        {
+            
+            //clienteAModificar = ;
+            //clienteAModificar.Dni = clienteAModificar.Dni;
+            //clienteAModificar.Nombre = nombre;
+            //clienteAModificar.Apellido = apellido;
+            //clienteAModificar.Direccion = direccion;
+            //clienteAModificar.FechaNacimiento = fechaNac;
+
+            return _clientMapper.Actualizar(clienteAModificar);
         }
 
         public object TraerPorNombre(string nombre)
@@ -88,6 +113,11 @@ namespace Negocio
                 throw new Exception("No hay clientes.");
 
             return _clientesFiltrados;
+        }
+
+        public TransactionResult Eliminar(Cliente clienteSeleccionado)
+        {
+            return _clientMapper.Eliminar(clienteSeleccionado);
         }
     }
 }

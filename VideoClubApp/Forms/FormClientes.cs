@@ -10,12 +10,13 @@ using System.Windows.Forms;
 using Negocio;
 using Entidades;
 using VideoClubApp.Forms.AgregarModificar;
+using Datos;
 
 namespace VideoClubApp.Forms
 {
     public partial class FormClientes : Form
     {
-        private AdmCliente _admClientes;
+        private AdmCliente _admCliente;
         private List<Cliente> _clientes;
         private Cliente _cliente;
         private Cliente _clienteSeleccionado;
@@ -23,8 +24,9 @@ namespace VideoClubApp.Forms
         {
             InitializeComponent();
 
-            _admClientes = new AdmCliente();
+            _admCliente = new AdmCliente();
             _clientes = new List<Cliente>();
+            _clienteSeleccionado = new Cliente();
 
         }
 
@@ -35,10 +37,14 @@ namespace VideoClubApp.Forms
 
         private void FormClientes_Load(object sender, EventArgs e)
         {
+            TraerTodos();
+        }
+        private void TraerTodos()
+        {
             try
             {
                 listClientes.DataSource = null;
-                listClientes.DataSource = _admClientes.TraerTodos();
+                listClientes.DataSource = _admCliente.TraerTodos();
             }
             catch (Exception ex)
             {
@@ -56,7 +62,7 @@ namespace VideoClubApp.Forms
             try
             {
                 listClientes.DataSource = null;
-                listClientes.DataSource = _admClientes.TraerPorDNI(Validaciones.ValidarInt(txtDNI.Text));
+                listClientes.DataSource = _admCliente.TraerPorDNI(Validaciones.ValidarInt(txtDNI.Text));
             }
             catch (Exception ex)
             {
@@ -71,7 +77,7 @@ namespace VideoClubApp.Forms
             {
                 ValidarNombre();
                 listClientes.DataSource = null;
-                listClientes.DataSource = _admClientes.TraerPorNombre(txtNombre.Text);
+                listClientes.DataSource = _admCliente.TraerPorNombre(txtNombre.Text);
             }
             catch (Exception ex)
             {
@@ -92,7 +98,7 @@ namespace VideoClubApp.Forms
             {
                 ValidarApellido();
                 listClientes.DataSource = null;
-                listClientes.DataSource = _admClientes.TraerPorApellido(txtApellido.Text);
+                listClientes.DataSource = _admCliente.TraerPorApellido(txtApellido.Text);
             }
             catch (Exception ex)
             {
@@ -115,40 +121,66 @@ namespace VideoClubApp.Forms
 
         private void txtApellido_TextChanged(object sender, EventArgs e)
         {
-
+            btnApellido_Click(sender, e);
         }
 
         private void txtDNI_TextChanged(object sender, EventArgs e)
         {
-
+            btnDNI_Click(sender, e);
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-
+            btnNombre_Click(sender, e);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            //Form frm = new Form(
-              //  _clienteSeleccionado.Dni
+            if(listClientes.SelectedValue!=null)
+            {
+                _clienteSeleccionado = (Cliente)listClientes.SelectedValue;
+                Form frm = new AgregarModificarCliente(_clienteSeleccionado);
+                frm.Owner = this;
+                frm.Show();
+            } else
+            {
+                MessageBox.Show("No seleccionó un cliente a modificar.");
+            }
+            
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void btnActualizar_Click(object sender, EventArgs e)
         {
-
+            TraerTodos();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (listClientes.SelectedValue != null)
+            {
+                _clienteSeleccionado = (Cliente)listClientes.SelectedValue;
 
+                TransactionResult resultado = _admCliente.Eliminar(_clienteSeleccionado);
+
+                MessageBox.Show(resultado.Id.ToString());
+            }
+            else
+            {
+                MessageBox.Show("No seleccionó un cliente a modificar.");
+            }
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        private void btnOrdenar_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                listClientes.DataSource = null;
+                listClientes.DataSource = _admCliente.TraerTodosOrdenadosPorId();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
-
-
     }
 }

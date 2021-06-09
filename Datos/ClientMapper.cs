@@ -44,17 +44,41 @@ namespace Datos
             return resultado;
         }
 
+        public TransactionResult Actualizar(Cliente clienteAModificar)
+        {
+            NameValueCollection obj = ReverseMap(clienteAModificar);
+
+            string json = WebHelper.Put("/cliente/"+ clienteAModificar.Id.ToString(), obj);
+
+            TransactionResult resultado = JsonConvert.DeserializeObject<TransactionResult>(json);
+            return resultado;
+        }
+
+        public TransactionResult Eliminar(Cliente clienteSeleccionado)
+        {
+            NameValueCollection obj = ReverseMap(clienteSeleccionado);
+
+            string json = WebHelper.Delete("/cliente/" + clienteSeleccionado.Id, obj);
+
+            TransactionResult resultado = JsonConvert.DeserializeObject<TransactionResult>(json);
+            return resultado;
+        }
+
         private NameValueCollection ReverseMap(Cliente cliente)
         {
             NameValueCollection n = new NameValueCollection();
             n.Add("id", cliente.id.ToString());
+            //n.Add("idCliente", cliente.IdCliente.ToString());
             n.Add("nombre", cliente.Nombre);
-            n.Add("apellido", cliente.Apellido);
+            n.Add("apellido", cliente.Apellido); //cliente.Apellido
             n.Add("direccion", cliente.Direccion);
             n.Add("DNI", cliente.Dni.ToString());//cliente.Dni.ToString()
             n.Add("fechaNacimiento", cliente.FechaNacimiento.ToString("yyyy-MM-dd"));//cliente.FechaNacimiento.ToString("yyyy-MM-dd")
-            n.Add("usuario", "1");
+            n.Add("activo", cliente.Activo.ToString());
+            n.Add("usuario", "825551");
             return n;
         }
+
+        
     }
 }

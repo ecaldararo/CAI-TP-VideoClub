@@ -14,7 +14,7 @@ namespace Entidades
         private int _idCliente;
         private string _estado;
         private DateTime _fechaAlta;
-        private string _direccion;
+        private bool _activo;
 
         public Cliente()
         {
@@ -25,7 +25,7 @@ namespace Entidades
         {
             //id += 1;
             Id = id;
-            IdCliente = id;
+            IdCliente = dni;
             Dni = dni;
             Nombre = nombre;
             Apellido = apellido;
@@ -43,10 +43,16 @@ namespace Entidades
         [DataMember(Name = "direccion")]
         public string Direccion { get => _direccion; set => _direccion = value; }
         
+        [DataMember(Name = "activo")]
+        public bool Activo { get => _activo; set => _activo = value; }
 
         public override string ToString()
         {
-            return $"{Id})  {Apellido}, {Nombre} (DNI:{Dni}) - Estado: {_estado} - Fecha Alta: {_fechaAlta}";
+            string activo = "Inactivo";
+            if (_activo == true)
+                activo = "Activo";
+
+            return $"Id:{Id})  {Apellido}, {Nombre} (DNI:{Dni}) - Nac: {FechaNacimiento.ToString("yyyy-MM-dd")} - Fecha Alta: {_fechaAlta.ToString("yyyy-MM-dd")} - Estado: {activo}";
         }
     }
 }

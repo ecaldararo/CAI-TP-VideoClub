@@ -129,7 +129,7 @@ namespace VideoClubApp
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSuperior.Location = new System.Drawing.Point(222, 0);
             this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(994, 69);
+            this.panelSuperior.Size = new System.Drawing.Size(1207, 69);
             this.panelSuperior.TabIndex = 23;
             // 
             // tituloPrincipal
@@ -147,7 +147,7 @@ namespace VideoClubApp
             this.panelInteraccion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInteraccion.Location = new System.Drawing.Point(222, 69);
             this.panelInteraccion.Name = "panelInteraccion";
-            this.panelInteraccion.Size = new System.Drawing.Size(994, 498);
+            this.panelInteraccion.Size = new System.Drawing.Size(1207, 498);
             this.panelInteraccion.TabIndex = 24;
             this.panelInteraccion.Paint += new System.Windows.Forms.PaintEventHandler(this.panelInteraccion_Paint);
             // 
@@ -155,7 +155,7 @@ namespace VideoClubApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1216, 567);
+            this.ClientSize = new System.Drawing.Size(1429, 567);
             this.Controls.Add(this.panelInteraccion);
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.panelIzquierdo);
