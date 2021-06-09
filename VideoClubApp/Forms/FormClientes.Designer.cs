@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.btnApellido = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDNI = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -51,18 +51,17 @@
             this.btnApellido.TabIndex = 1;
             this.btnApellido.Text = "Buscar";
             this.btnApellido.UseVisualStyleBackColor = true;
-            this.btnApellido.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnModificar
             // 
-            this.button1.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(38, 351);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 44);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Modificar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnModificar.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Location = new System.Drawing.Point(38, 310);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(121, 85);
+            this.btnModificar.TabIndex = 2;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // label1
             // 
@@ -73,7 +72,6 @@
             this.label1.Size = new System.Drawing.Size(40, 23);
             this.label1.TabIndex = 7;
             this.label1.Text = "DNI";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtDNI
             // 
@@ -82,17 +80,18 @@
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(133, 35);
             this.txtDNI.TabIndex = 6;
-            this.txtDNI.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtDNI.TextChanged += new System.EventHandler(this.txtDNI_TextChanged);
             // 
-            // button3
+            // btnAgregar
             // 
-            this.button3.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(38, 39);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(121, 46);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Agregar Cliente";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAgregar.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(38, 39);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(121, 72);
+            this.btnAgregar.TabIndex = 3;
+            this.btnAgregar.Text = "Agregar Cliente";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label2
             // 
@@ -103,7 +102,6 @@
             this.label2.Size = new System.Drawing.Size(73, 23);
             this.label2.TabIndex = 9;
             this.label2.Text = "Apellido";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -114,7 +112,6 @@
             this.label3.Size = new System.Drawing.Size(76, 23);
             this.label3.TabIndex = 11;
             this.label3.Text = "Nombre";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtNombre
             // 
@@ -123,7 +120,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(133, 35);
             this.txtNombre.TabIndex = 12;
-            this.txtNombre.TextChanged += new System.EventHandler(this.textBox3_TextChanged_1);
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtApellido
             // 
@@ -132,7 +129,7 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(133, 35);
             this.txtApellido.TabIndex = 13;
-            this.txtApellido.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
+            this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
             // 
             // listClientes
             // 
@@ -181,8 +178,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDNI);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnApellido);
             this.Name = "FormClientes";
             this.Text = "Clientes";
@@ -195,10 +192,10 @@
         #endregion
 
         private System.Windows.Forms.Button btnApellido;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDNI;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNombre;

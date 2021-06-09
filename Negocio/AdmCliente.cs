@@ -15,8 +15,8 @@ namespace Negocio
 
         public AdmCliente()
         {
-            
-            
+            _clientMapper = new ClientMapper();
+            _clientes = new List<Cliente>();
         }
         public List<Cliente> TraerTodos()
         {
@@ -27,14 +27,18 @@ namespace Negocio
         }
         public List<Cliente> TraerPorDNI(int dni)
         {
-            //_clientes = _clientMapper.TraerTodos();
+            _clientes = _clientMapper.TraerTodos();
+
+            List<Cliente> _clientesFiltrados = new List<Cliente>();
 
             if (_clientes.Count() > 0)
-                _clientes.Where(x => x.Dni == dni);
+            {
+                _clientesFiltrados.AddRange(_clientes.Where(x => x.Dni == dni));
+            }
             else
                 throw new Exception("No hay clientes.");
 
-            return _clientes;
+            return _clientesFiltrados;
 
         }
     }

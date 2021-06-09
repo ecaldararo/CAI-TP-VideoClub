@@ -13,7 +13,7 @@ namespace Datos
         private List<Cliente> _clientes;
         public ClientMapper()
         {
-            
+            _clientes = new List<Cliente>();
         }
 
         public List<Cliente> TraerTodos()

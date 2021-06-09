@@ -22,17 +22,8 @@ namespace VideoClubApp.Forms
         {
             InitializeComponent();
 
-            
-
-
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
+            _admClientes = new AdmCliente();
+            _clientes = new List<Cliente>();
 
         }
 
@@ -41,67 +32,10 @@ namespace VideoClubApp.Forms
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormClientes_Load(object sender, EventArgs e)
         {
-
-            List<Cliente> _clientes = new List<Cliente>();
-            _clientes.Add(new Cliente(28000000, "Juan", "Perez"));
-            _clientes.Add(new Cliente(29000000, "Jorge", "Perez"));
-            _clientes.Add(new Cliente(30000000, "Jorge Juan", "Sanchez"));
-
             listClientes.DataSource = null;
-            listClientes.DataSource = _clientes;
-            //listClientes.DataSource = _admClientes.TraerTodos();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            listClientes.DataSource = _admClientes.TraerTodos();
         }
 
         private void listClientes_SelectedIndexChanged(object sender, EventArgs e)
@@ -114,13 +48,54 @@ namespace VideoClubApp.Forms
             try
             {
                 listClientes.DataSource = null;
-                //listClientes.DataSource = _admClientes.TraerPorDNI(_clienteSeleccionado.Dni);
+                listClientes.DataSource = _admClientes.TraerPorDNI(Validaciones.ValidarInt(txtDNI.Text));
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
             
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtApellido_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDNI_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            //Form frm = new Form(
+              //  _clienteSeleccionado.Dni
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
