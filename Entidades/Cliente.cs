@@ -20,8 +20,8 @@ namespace Entidades
             id += 1;
             _idCliente = id;
             Dni = dni;
-            Apellido = nombre;
-            Nombre = apellido;
+            Nombre = nombre;
+            Apellido = apellido;
             _estado = "Activo";
             _fechaAlta = DateTime.Now;
         }

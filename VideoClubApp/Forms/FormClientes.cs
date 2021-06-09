@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio;
 using Entidades;
+using VideoClubApp.Forms.AgregarModificar;
 
 namespace VideoClubApp.Forms
 {
@@ -27,15 +28,22 @@ namespace VideoClubApp.Forms
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
+        //private void button4_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
         private void FormClientes_Load(object sender, EventArgs e)
         {
-            listClientes.DataSource = null;
-            listClientes.DataSource = _admClientes.TraerTodos();
+            try
+            {
+                listClientes.DataSource = null;
+                listClientes.DataSource = _admClientes.TraerTodos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void listClientes_SelectedIndexChanged(object sender, EventArgs e)
@@ -57,9 +65,52 @@ namespace VideoClubApp.Forms
             
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnNombre_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ValidarNombre();
+                listClientes.DataSource = null;
+                listClientes.DataSource = _admClientes.TraerPorNombre(txtNombre.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void ValidarNombre()
+        {
+            if (txtNombre.Text == "")
+                throw new Exception("Debe ingresar un Nombre");
+        }
+
+        private void btnApellido_Click(object sender, EventArgs e)
         {
             
+            try
+            {
+                ValidarApellido();
+                listClientes.DataSource = null;
+                listClientes.DataSource = _admClientes.TraerPorApellido(txtApellido.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void ValidarApellido()
+        {
+            if (txtApellido.Text == "")
+                throw new Exception("Debe ingresar un Apellido");
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            AgregarModificarCliente frm = new AgregarModificarCliente();
+            frm.Owner = this;
+            frm.Show();
         }
 
         private void txtApellido_TextChanged(object sender, EventArgs e)
@@ -97,5 +148,7 @@ namespace VideoClubApp.Forms
         {
 
         }
+
+
     }
 }

@@ -51,6 +51,7 @@
             this.btnApellido.TabIndex = 1;
             this.btnApellido.Text = "Buscar";
             this.btnApellido.UseVisualStyleBackColor = true;
+            this.btnApellido.Click += new System.EventHandler(this.btnApellido_Click);
             // 
             // btnModificar
             // 
@@ -80,7 +81,6 @@
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(133, 35);
             this.txtDNI.TabIndex = 6;
-            this.txtDNI.TextChanged += new System.EventHandler(this.txtDNI_TextChanged);
             // 
             // btnAgregar
             // 
@@ -120,7 +120,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(133, 35);
             this.txtNombre.TabIndex = 12;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtApellido
             // 
@@ -129,7 +128,6 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(133, 35);
             this.txtApellido.TabIndex = 13;
-            this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
             // 
             // listClientes
             // 
@@ -162,6 +160,7 @@
             this.btnNombre.TabIndex = 16;
             this.btnNombre.Text = "Buscar";
             this.btnNombre.UseVisualStyleBackColor = true;
+            this.btnNombre.Click += new System.EventHandler(this.btnNombre_Click);
             // 
             // FormClientes
             // 
