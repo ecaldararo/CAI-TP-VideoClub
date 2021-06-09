@@ -62,9 +62,16 @@ namespace Negocio
 
         }
 
-        public TransactionResult Agregar(string nombre, string apellido, object fechaNac)
+        public TransactionResult Agregar(int dni,string nombre, string apellido,string direccion, DateTime fechaNac)
         {
-            throw new NotImplementedException();
+            Cliente nuevoCliente = new Cliente();
+            nuevoCliente.Dni = dni;
+            nuevoCliente.Nombre = nombre;
+            nuevoCliente.Apellido = apellido;
+            nuevoCliente.Direccion = direccion;
+            nuevoCliente.FechaNacimiento = fechaNac;
+
+            return _clientMapper.Insertar(nuevoCliente);
         }
 
         public object TraerPorNombre(string nombre)

@@ -9,7 +9,7 @@ using System.Configuration;
 
 namespace Datos
 {
-    class WebHelper
+    public static class WebHelper
     {
         static WebClient client;
         static string rutaBase;

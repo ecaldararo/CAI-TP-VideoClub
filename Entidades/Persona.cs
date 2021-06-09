@@ -14,12 +14,18 @@ namespace Entidades
         private string _nombre;
         private string _apellido;
         protected string _direccion;
+        private DateTime _fechaNacimiento;
 
         [DataMember(Name = "DNI")]
         public int Dni { get => _dni; set => _dni = value; }
+
         [DataMember(Name = "nombre")]
         public string Nombre { get => _nombre; set => _nombre = value; }
+
         [DataMember(Name = "apellido")]
         public string Apellido { get => _apellido; set => _apellido = value; }
+
+        [DataMember(Name = "fechaNacimiento")]
+        public DateTime FechaNacimiento { get => _fechaNacimiento; set => _fechaNacimiento = value; }
     }
 }

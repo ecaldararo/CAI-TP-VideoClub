@@ -41,13 +41,15 @@ namespace VideoClubApp.Forms.AgregarModificar
             int dni = Validaciones.ValidarInt(txtDni.Text);
             string nombre = txtNombre.Text;
             string apellido = txtApellido.Text;
+            string direccion = txtDireccion.Text;
             DateTime fechaNac = dateTimeNac.Value;
 
             // validaciones
 
-            Cliente nuevoCliente = new Cliente(dni,nombre,apellido);
+            TransactionResult resultado = _admCliente.Agregar(dni, nombre, apellido,direccion, fechaNac);
 
-            TransactionResult resultado = _admCliente.Agregar(nombre, apellido, fechaNac);
+            MessageBox.Show(resultado.Id.ToString());
+            this.Hide();
 
         }
     }
