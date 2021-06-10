@@ -46,7 +46,7 @@ namespace Datos
 
         public TransactionResult Actualizar(Cliente clienteAModificar)
         {
-            NameValueCollection obj = ReverseMap(clienteAModificar);
+            NameValueCollection obj = ReverseMapActualizar(clienteAModificar);
 
             string json = WebHelper.Put("/cliente/"+ clienteAModificar.Id.ToString(), obj);
 
@@ -67,8 +67,7 @@ namespace Datos
         private NameValueCollection ReverseMap(Cliente cliente)
         {
             NameValueCollection n = new NameValueCollection();
-            n.Add("id", cliente.id.ToString());
-            //n.Add("idCliente", cliente.IdCliente.ToString());
+            //n.Add("id", cliente.id.ToString());
             n.Add("nombre", cliente.Nombre);
             n.Add("apellido", cliente.Apellido); //cliente.Apellido
             n.Add("direccion", cliente.Direccion);
@@ -79,6 +78,19 @@ namespace Datos
             return n;
         }
 
-        
+        private NameValueCollection ReverseMapActualizar(Cliente cliente)
+        {
+            NameValueCollection n = new NameValueCollection();
+            n.Add("id", cliente.id.ToString());
+            n.Add("nombre", cliente.Nombre);
+            n.Add("apellido", cliente.Apellido); //cliente.Apellido
+            n.Add("direccion", cliente.Direccion);
+            n.Add("DNI", cliente.Dni.ToString());//cliente.Dni.ToString()
+            n.Add("fechaNacimiento", cliente.FechaNacimiento.ToString("yyyy-MM-dd"));//cliente.FechaNacimiento.ToString("yyyy-MM-dd")
+            n.Add("activo", cliente.Activo.ToString());
+            return n;
+        }
+
+
     }
 }

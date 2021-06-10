@@ -88,14 +88,6 @@ namespace Negocio
 
         public TransactionResult Modificar(Cliente clienteAModificar)
         {
-            
-            //clienteAModificar = ;
-            //clienteAModificar.Dni = clienteAModificar.Dni;
-            //clienteAModificar.Nombre = nombre;
-            //clienteAModificar.Apellido = apellido;
-            //clienteAModificar.Direccion = direccion;
-            //clienteAModificar.FechaNacimiento = fechaNac;
-
             return _clientMapper.Actualizar(clienteAModificar);
         }
 

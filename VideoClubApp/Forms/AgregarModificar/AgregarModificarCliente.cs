@@ -53,20 +53,28 @@ namespace VideoClubApp.Forms.AgregarModificar
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             // datos
+            try
+            {
+                int dni = Validaciones.ValidarInt(txtDni.Text);
+                string nombre = txtNombre.Text;
+                string apellido = txtApellido.Text;
+                string direccion = txtDireccion.Text;
+                DateTime fechaNac = dateTimeNac.Value;
+                bool activo = chbActivo.Checked;
 
-            int dni = Validaciones.ValidarInt(txtDni.Text);
-            string nombre = txtNombre.Text;
-            string apellido = txtApellido.Text;
-            string direccion = txtDireccion.Text;
-            DateTime fechaNac = dateTimeNac.Value;
-            bool activo = chbActivo.Checked;
+                // validaciones
 
-            // validaciones
+                TransactionResult resultado = _admCliente.Agregar(dni, nombre, apellido, direccion, fechaNac, activo);
 
-            TransactionResult resultado = _admCliente.Agregar(dni, nombre, apellido,direccion, fechaNac, activo);
+                MessageBox.Show(resultado.Id.ToString());
 
-            MessageBox.Show(resultado.Id.ToString());
-            this.Hide();
+                this.Hide();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error");
+            }
+            
 
         }
 

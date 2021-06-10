@@ -8,5 +8,37 @@ namespace Entidades
 {
     public class Pelicula
     {
+
+        //anio integer($int32)
+        //duracion integer($int32)
+        //titulo string
+        //nullable: true
+        //director string
+        //nullable: true
+        //productora string
+        //nullable: true
+        //genero string
+        //nullable: true
+        //id integer($int32)
+
+        private int anio;
+        private int duracion;
+        private string titulo;
+        //nullable: true
+        private string director;
+        //nullable: true
+        private string productora;
+        //nullable: true
+        private string genero;
+        //nullable: true
+        private int id;
+
+        public int Anio { get => anio; set => anio = value; }
+        public int Duracion { get => duracion; set => duracion = value; }
+        public string Titulo { get => titulo; set => titulo = value; }
+        public string Director { get => director; set => director = value; }
+        public string Productora { get => productora; set => productora = value; }
+        public string Genero { get => genero; set => genero = value; }
+        public int Id { get => id; set => id = value; }
     }
 }

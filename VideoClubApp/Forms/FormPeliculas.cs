@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VideoClubApp.Forms.AgregarModificar;
 
 namespace VideoClubApp.Forms
 {
     public partial class FormPeliculas : Form
     {
+        private AgregarModificarPelicula _frm;
         public FormPeliculas()
         {
             InitializeComponent();
@@ -49,6 +51,14 @@ namespace VideoClubApp.Forms
 
         private void label2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AgregarModificarPelicula frm = new AgregarModificarPelicula(this);
+            frm.Owner = this;
+            frm.Show();
 
         }
     }
