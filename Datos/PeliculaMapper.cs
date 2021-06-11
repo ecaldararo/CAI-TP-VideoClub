@@ -104,6 +104,17 @@ namespace Datos
             return n;
         }
 
+        private NameValueCollection ReverseMapCopia(Copia copia)
+        {
+            NameValueCollection n = new NameValueCollection();
+            n.Add("id", copia.Id.ToString());
+            n.Add("idPelicula", copia.IdPelicula.ToString());
+            n.Add("observaciones", copia.Observaciones);
+            n.Add("fechaAlta", copia.FechaAlta.ToString("yyyy-MM-dd")); //
+            n.Add("precio", "100");//copia.Precio.ToString()
+            return n;
+        }
+
         private NameValueCollection ReverseMapActualizar(Pelicula pelicula)
         {
             NameValueCollection n = new NameValueCollection();
@@ -117,15 +128,6 @@ namespace Datos
             return n;
         }
 
-        private NameValueCollection ReverseMapCopia(Copia copia)
-        {
-            NameValueCollection n = new NameValueCollection();
-            n.Add("id", copia.Id.ToString());
-            n.Add("idPelicula", copia.IdPelicula.ToString());
-            n.Add("observaciones", copia.Observaciones);
-            n.Add("fechaAlta", "2020-01-01" ); //copia.FechaAlta.ToString("yyyy-MM-dd")
-            n.Add("precio", "100" );//copia.Precio.ToString()
-            return n;
-        }
+
     }
 }
