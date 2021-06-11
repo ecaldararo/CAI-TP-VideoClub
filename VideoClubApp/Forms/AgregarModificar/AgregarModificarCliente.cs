@@ -81,21 +81,28 @@ namespace VideoClubApp.Forms.AgregarModificar
         private void btnModificar_Click(object sender, EventArgs e)
         {
             // datos
+            try
+            {
+                _clienteSeleccionado.Id = Validaciones.ValidarInt(txtId.Text);
+                _clienteSeleccionado.Dni = Validaciones.ValidarInt(txtDni.Text);
+                _clienteSeleccionado.Nombre = txtNombre.Text;
+                _clienteSeleccionado.Apellido = txtApellido.Text;
+                _clienteSeleccionado.Direccion = txtDireccion.Text;
+                _clienteSeleccionado.FechaNacimiento = dateTimeNac.Value;
+                _clienteSeleccionado.Activo = chbActivo.Checked;
 
-            _clienteSeleccionado.id = Validaciones.ValidarInt(txtId.Text);
-            _clienteSeleccionado.Dni = Validaciones.ValidarInt(txtDni.Text);
-            _clienteSeleccionado.Nombre = txtNombre.Text;
-            _clienteSeleccionado.Apellido = txtApellido.Text;
-            _clienteSeleccionado.Direccion = txtDireccion.Text;
-            _clienteSeleccionado.FechaNacimiento = dateTimeNac.Value;
-            _clienteSeleccionado.Activo = chbActivo.Checked;
+                // validaciones
 
-            // validaciones
+                TransactionResult resultado = _admCliente.Modificar(_clienteSeleccionado);
 
-            TransactionResult resultado = _admCliente.Modificar(_clienteSeleccionado);
-
-            MessageBox.Show("Cliente " + resultado.Id.ToString() + " modificado");
-            this.Hide();
+                MessageBox.Show("Cliente " + resultado.Id.ToString() + " modificado");
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }

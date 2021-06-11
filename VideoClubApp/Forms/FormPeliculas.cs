@@ -43,14 +43,27 @@ namespace VideoClubApp.Forms
         {
             try
             {
+                _copias.Clear();
+                _peliculas.Clear();
                 _copias = _admPelicula.TraerCopias();
                 _peliculas = _admPelicula.TraerPeliculas();
 
+                //foreach (Copia c in _copias)
+                //{
+                //    if (_peliculas.Exists(x => x.Id == c.IdPelicula))
+                //        _peliculas.FirstOrDefault(x => x.Id == c.IdPelicula).copias.Add(c);
+                //}
+
                 foreach (Copia c in _copias)
                 {
-                    if (_peliculas.Exists(x => x.Id == c.IdPelicula))
-                        _peliculas.FirstOrDefault(x => x.Id == c.IdPelicula).copias.Add(c);
+                    _peliculas.FirstOrDefault(x => x.Id == c.IdPelicula).copias.Add(c);
                 }
+
+                // mal, porque agrega 1 copia por pelicula
+                //foreach (Pelicula p in _peliculas)
+                //{
+                //    p.copias.Add(_copias.FirstOrDefault(x => x.IdPelicula == p.Id));
+                //}
 
                 listPeliculas.DataSource = null;
                 listPeliculas.DataSource = _peliculas;

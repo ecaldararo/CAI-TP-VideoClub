@@ -47,7 +47,7 @@ namespace Datos
         {
             NameValueCollection obj = ReverseMapActualizar(clienteAModificar);
 
-            string json = WebHelper.Put("/cliente/"+ clienteAModificar.Id.ToString(), obj);
+            string json = WebHelper.Put("/cliente", obj);
 
             TransactionResult resultado = JsonConvert.DeserializeObject<TransactionResult>(json);
             return resultado;
