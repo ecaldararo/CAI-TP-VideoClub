@@ -59,7 +59,7 @@
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(40, 319);
+            this.btnModificar.Location = new System.Drawing.Point(37, 243);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(121, 85);
             this.btnModificar.TabIndex = 2;
@@ -89,7 +89,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(40, 163);
+            this.btnAgregar.Location = new System.Drawing.Point(37, 87);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(121, 72);
             this.btnAgregar.TabIndex = 3;
@@ -171,7 +171,7 @@
             // btnActualizar
             // 
             this.btnActualizar.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(40, 86);
+            this.btnActualizar.Location = new System.Drawing.Point(37, 333);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(121, 72);
             this.btnActualizar.TabIndex = 17;
@@ -182,7 +182,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(40, 241);
+            this.btnEliminar.Location = new System.Drawing.Point(37, 165);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(121, 72);
             this.btnEliminar.TabIndex = 18;

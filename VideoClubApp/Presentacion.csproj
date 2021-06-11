@@ -76,17 +76,23 @@
     <Compile Include="Forms\AgregarModificar\AgregarModificarPrestamo.Designer.cs">
       <DependentUpon>AgregarModificarPrestamo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormPeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormPeliculas.Designer.cs">
+      <DependentUpon>FormPeliculas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormClientes.Designer.cs">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormPeliculas.cs">
+    <Compile Include="Forms\FormPeliculas2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormPeliculas.Designer.cs">
-      <DependentUpon>FormPeliculas.cs</DependentUpon>
+    <Compile Include="Forms\FormPeliculas2.Designer.cs">
+      <DependentUpon>FormPeliculas2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,11 +108,14 @@
     <EmbeddedResource Include="Forms\AgregarModificar\AgregarModificarPelicula.resx">
       <DependentUpon>AgregarModificarPelicula.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormPeliculas.resx">
+      <DependentUpon>FormPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormPeliculas.resx">
-      <DependentUpon>FormPeliculas.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormPeliculas2.resx">
+      <DependentUpon>FormPeliculas2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

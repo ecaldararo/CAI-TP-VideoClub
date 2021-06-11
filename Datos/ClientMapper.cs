@@ -19,8 +19,7 @@ namespace Datos
 
         public List<Cliente> TraerTodos()
         {
-            // IR A EL REPOSITORIO DE DATOS (bd, file, webservice)
-
+            
             string json2 = WebHelper.Get("/cliente");
 
             List<Cliente> clientes = MappearLista(json2);

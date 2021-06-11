@@ -14,19 +14,22 @@ namespace VideoClubApp.Forms.AgregarModificar
 {
     public partial class AgregarModificarPelicula : Form
     {
-        private FormPeliculas formPeliculas;
+        private FormPeliculas2 formPeliculas;
         private AdmPelicula _admPelicula;
+
+        private Pelicula _pelicula;
 
         public AgregarModificarPelicula()
         {
             InitializeComponent();
         }
 
-        public AgregarModificarPelicula(FormPeliculas formPeliculas)
+        public AgregarModificarPelicula(Pelicula pelicula)
         {
             InitializeComponent();
-            this.formPeliculas = formPeliculas;
             _admPelicula = new AdmPelicula();
+            _pelicula = pelicula;
+
         }
 
         private void btnVolver_Click(object sender, EventArgs e)

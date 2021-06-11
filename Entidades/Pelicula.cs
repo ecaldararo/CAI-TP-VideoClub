@@ -32,6 +32,12 @@ namespace Entidades
         private string genero;
         //nullable: true
         private int id;
+        public List<Copia> copias;
+
+        public Pelicula()
+        {
+            copias = new List<Copia>();
+        }
 
         public int Anio { get => anio; set => anio = value; }
         public int Duracion { get => duracion; set => duracion = value; }
@@ -40,5 +46,10 @@ namespace Entidades
         public string Productora { get => productora; set => productora = value; }
         public string Genero { get => genero; set => genero = value; }
         public int Id { get => id; set => id = value; }
+
+        public override string ToString()
+        {
+            return $"ID:{Id} \tTítulo:{Titulo}Año:{Anio}-Duración: {Duracion}-Cantidad de Copias:{copias.Count()}";
+        }
     }
 }

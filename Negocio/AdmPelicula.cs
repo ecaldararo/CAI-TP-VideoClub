@@ -11,6 +11,7 @@ namespace Negocio
     public class AdmPelicula
     {
         private PeliculaMapper _peliculaMapper;
+        private Pelicula _pelicula;
         public AdmPelicula()
         {
             _peliculaMapper = new PeliculaMapper();
@@ -19,6 +20,66 @@ namespace Negocio
         public void Alta(Pelicula pel)
         {
             _peliculaMapper.Insertar(pel);
+        }
+
+        public string AgregarCopia(Copia nuevaCopia)
+        {
+            TransactionResult rdo =_peliculaMapper.InsertarCopia(nuevaCopia);
+
+            if (rdo.IsOk == false)
+            {
+                throw new Exception("Error al agregar copia");
+            } else
+            {
+                return "Copia Agregada exitosamente";
+            }
+            
+
+        }
+
+        //public void AgregarCopias(List<Copia> copias,int cantidad)
+        //{
+        //    if (_peliculaMapper.InsertarCopias(copias).IsOk == false)
+        //    {
+        //        throw new Exception("Error al agregar copia");
+        //    }
+        //}
+
+        public List<Pelicula> TraerPeliculas()
+        {
+            return _peliculaMapper.TraerTodos();
+        }
+
+        public List<Copia> TraerCopias()
+        {
+            return _peliculaMapper.TraerCopias();
+        }
+
+        public TransactionResult Eliminar(Pelicula peliculaSeleccionado)
+        {
+            throw new NotImplementedException();
+        }
+
+        public object TraerTodosOrdenadosPorId()
+        {
+            throw new NotImplementedException();
+        }
+
+        public object TraerPorGenero(string text)
+        {
+            throw new NotImplementedException();
+        }
+
+        public object TraerPorTitulo(string text)
+        {
+            throw new NotImplementedException();
+        }
+
+        
+
+        public object TraerPorCodigo(int v)
+        {
+            throw new NotImplementedException();
         }
     }
 }
