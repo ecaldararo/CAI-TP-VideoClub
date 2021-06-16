@@ -42,25 +42,23 @@ namespace VideoClubApp.Forms.AgregarModificar
                 nuevaCopia.IdPelicula = _pelicula.Id;
                 nuevaCopia.Observaciones = txtObservaciones.Text;
                 nuevaCopia.FechaAlta = DateTime.Now;
-                _pelicula.copias.Add(nuevaCopia);
 
-                string rdo = _admPelicula.AgregarCopia(nuevaCopia);
-                MessageBox.Show(rdo);
+                int rdo = 0;
+                int cant = Validaciones.ValidarInt(txtCantidad.Text);
+                if (cant < 1)
+                    throw new Exception("Cantidad de copias menor a 1");
 
-                //int cant = Validaciones.ValidarInt(txtCantidad.Text);
-                //for (int i = 1; i < cant; i++)
-                //{
-                //    Copia nuevaCopia = new Copia();
-                //    nuevaCopia.IdPelicula = _pelicula.Id;
-                //    nuevaCopia.Observaciones = txtObservaciones.Text;
-                //    nuevaCopia.FechaAlta = DateTime.Now;
-                //    _pelicula.copias.Add(nuevaCopia);
-                //}
+                for (int i = 1; i <= cant; i++)
+                {
+                   _pelicula.copias.Add(nuevaCopia); // no tiene utilidad
+                    rdo += _admPelicula.AgregarCopia(nuevaCopia);
+                }
 
-                //foreach (Copia c in _pelicula.copias)
-                //{
-                //    _admPelicula.AgregarCopias(c, cant);
-                //}
+                if(rdo==0)
+                    MessageBox.Show("Error al agregar las copias");
+                else
+                    MessageBox.Show("Se agregaron "+rdo+" copias exitosamente");
+
             }
             catch (Exception ex)
             {

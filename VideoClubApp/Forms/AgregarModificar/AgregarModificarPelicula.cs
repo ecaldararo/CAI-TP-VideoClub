@@ -14,7 +14,7 @@ namespace VideoClubApp.Forms.AgregarModificar
 {
     public partial class AgregarModificarPelicula : Form
     {
-        private FormPeliculas2 formPeliculas;
+        private FormPeliculas formPeliculas;
         private AdmPelicula _admPelicula;
 
         private Pelicula _pelicula;

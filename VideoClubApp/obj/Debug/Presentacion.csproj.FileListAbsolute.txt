@@ -34,4 +34,3 @@ H:\Escritorio\GitHub\CAI-TP-Peliculas\VideoClubApp\obj\Debug\Presentacion.csproj
 H:\Escritorio\GitHub\CAI-TP-Peliculas\VideoClubApp\obj\Debug\Presentacion.csproj.CopyComplete
 H:\Escritorio\GitHub\CAI-TP-Peliculas\VideoClubApp\obj\Debug\VideoClubApp.exe
 H:\Escritorio\GitHub\CAI-TP-Peliculas\VideoClubApp\obj\Debug\VideoClubApp.pdb
-H:\Escritorio\GitHub\CAI-TP-Peliculas\VideoClubApp\obj\Debug\VideoClubApp.Forms.FormPeliculas2.resources

@@ -22,16 +22,16 @@ namespace Negocio
             _peliculaMapper.Insertar(pel);
         }
 
-        public string AgregarCopia(Copia nuevaCopia)
+        public int AgregarCopia(Copia nuevaCopia)
         {
             TransactionResult rdo =_peliculaMapper.InsertarCopia(nuevaCopia);
 
-            if (rdo.IsOk == false)
+            if (rdo.IsOk == true)
             {
-                throw new Exception("Error al agregar copia");
+                return 1;
             } else
             {
-                return "Copia Agregada exitosamente";
+                return 0;
             }
             
 
