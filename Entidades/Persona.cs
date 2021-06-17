@@ -10,22 +10,22 @@ namespace Entidades
     [DataContract]
     public abstract class Persona
     {
-        private int _dni;
-        private string _nombre;
-        private string _apellido;
+        protected int _dni;
+        protected string _nombre;
+        protected string _apellido;
         protected string _direccion;
-        private DateTime _fechaNacimiento;
+        protected DateTime _fechaNacimiento;
 
-        [DataMember(Name = "DNI")]
-        public int Dni { get => _dni; set => _dni = value; }
+        //[DataMember(Name = "DNI")]
+        //protected int Dni { get => _dni; set => _dni = value; }
 
-        [DataMember(Name = "nombre")]
-        public string Nombre { get => _nombre; set => _nombre = value; }
+        //[DataMember(Name = "nombre")]
+        //protected string Nombre { get => _nombre; set => _nombre = value; }
 
-        [DataMember(Name = "apellido")]
-        public string Apellido { get => _apellido; set => _apellido = value; }
+        //[DataMember(Name = "apellido")]
+        //protected string Apellido { get => _apellido; set => _apellido = value; }
 
-        [DataMember(Name = "fechaNacimiento")]
-        public DateTime FechaNacimiento { get => _fechaNacimiento; set => _fechaNacimiento = value; }
+        //[DataMember(Name = "fechaNacimiento")]
+        //protected DateTime FechaNacimiento { get => _fechaNacimiento; set => _fechaNacimiento = value; }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnApellido = new System.Windows.Forms.Button();
+            this.btnGenero = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
@@ -38,32 +38,32 @@
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.txtGenero = new System.Windows.Forms.TextBox();
             this.listPeliculas = new System.Windows.Forms.ListBox();
-            this.btnDNI = new System.Windows.Forms.Button();
-            this.btnNombre = new System.Windows.Forms.Button();
+            this.btnCodigo = new System.Windows.Forms.Button();
+            this.btnTitulo = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnOrdenar = new System.Windows.Forms.Button();
             this.btnAgregarCopia = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnApellido
+            // btnGenero
             // 
-            this.btnApellido.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApellido.Location = new System.Drawing.Point(579, 48);
-            this.btnApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnApellido.Name = "btnApellido";
-            this.btnApellido.Size = new System.Drawing.Size(51, 34);
-            this.btnApellido.TabIndex = 1;
-            this.btnApellido.Text = "Buscar";
-            this.btnApellido.UseVisualStyleBackColor = true;
-            this.btnApellido.Click += new System.EventHandler(this.btnApellido_Click);
+            this.btnGenero.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenero.Location = new System.Drawing.Point(579, 48);
+            this.btnGenero.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGenero.Name = "btnGenero";
+            this.btnGenero.Size = new System.Drawing.Size(51, 34);
+            this.btnGenero.TabIndex = 1;
+            this.btnGenero.Text = "Buscar";
+            this.btnGenero.UseVisualStyleBackColor = true;
+            this.btnGenero.Click += new System.EventHandler(this.btnGenero_Click);
             // 
             // btnModificar
             // 
             this.btnModificar.Enabled = false;
             this.btnModificar.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Location = new System.Drawing.Point(28, 225);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(91, 45);
             this.btnModificar.TabIndex = 2;
@@ -86,7 +86,7 @@
             // 
             this.txtCodigo.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.Location = new System.Drawing.Point(146, 53);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(101, 29);
             this.txtCodigo.TabIndex = 6;
@@ -96,7 +96,7 @@
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(28, 36);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(91, 58);
             this.btnAgregar.TabIndex = 3;
@@ -131,7 +131,7 @@
             // 
             this.txtTitulo.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTitulo.Location = new System.Drawing.Point(309, 51);
-            this.txtTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTitulo.Margin = new System.Windows.Forms.Padding(2);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(101, 29);
             this.txtTitulo.TabIndex = 12;
@@ -141,7 +141,7 @@
             // 
             this.txtGenero.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGenero.Location = new System.Drawing.Point(475, 51);
-            this.txtGenero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGenero.Margin = new System.Windows.Forms.Padding(2);
             this.txtGenero.Name = "txtGenero";
             this.txtGenero.Size = new System.Drawing.Size(101, 29);
             this.txtGenero.TabIndex = 13;
@@ -153,41 +153,41 @@
             this.listPeliculas.FormattingEnabled = true;
             this.listPeliculas.ItemHeight = 17;
             this.listPeliculas.Location = new System.Drawing.Point(147, 98);
-            this.listPeliculas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listPeliculas.Margin = new System.Windows.Forms.Padding(2);
             this.listPeliculas.Name = "listPeliculas";
             this.listPeliculas.Size = new System.Drawing.Size(607, 225);
             this.listPeliculas.TabIndex = 14;
             this.listPeliculas.SelectedIndexChanged += new System.EventHandler(this.listPeliculas_SelectedIndexChanged);
             // 
-            // btnDNI
+            // btnCodigo
             // 
-            this.btnDNI.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDNI.Location = new System.Drawing.Point(250, 48);
-            this.btnDNI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnDNI.Name = "btnDNI";
-            this.btnDNI.Size = new System.Drawing.Size(51, 34);
-            this.btnDNI.TabIndex = 15;
-            this.btnDNI.Text = "Buscar";
-            this.btnDNI.UseVisualStyleBackColor = true;
-            this.btnDNI.Click += new System.EventHandler(this.btnDNI_Click);
+            this.btnCodigo.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCodigo.Location = new System.Drawing.Point(250, 48);
+            this.btnCodigo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCodigo.Name = "btnCodigo";
+            this.btnCodigo.Size = new System.Drawing.Size(51, 34);
+            this.btnCodigo.TabIndex = 15;
+            this.btnCodigo.Text = "Buscar";
+            this.btnCodigo.UseVisualStyleBackColor = true;
+            this.btnCodigo.Click += new System.EventHandler(this.btnCodigo_Click);
             // 
-            // btnNombre
+            // btnTitulo
             // 
-            this.btnNombre.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNombre.Location = new System.Drawing.Point(413, 48);
-            this.btnNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnNombre.Name = "btnNombre";
-            this.btnNombre.Size = new System.Drawing.Size(51, 34);
-            this.btnNombre.TabIndex = 16;
-            this.btnNombre.Text = "Buscar";
-            this.btnNombre.UseVisualStyleBackColor = true;
-            this.btnNombre.Click += new System.EventHandler(this.btnNombre_Click);
+            this.btnTitulo.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTitulo.Location = new System.Drawing.Point(413, 48);
+            this.btnTitulo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTitulo.Name = "btnTitulo";
+            this.btnTitulo.Size = new System.Drawing.Size(51, 34);
+            this.btnTitulo.TabIndex = 16;
+            this.btnTitulo.Text = "Buscar";
+            this.btnTitulo.UseVisualStyleBackColor = true;
+            this.btnTitulo.Click += new System.EventHandler(this.btnTitulo_Click);
             // 
             // btnActualizar
             // 
             this.btnActualizar.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.Location = new System.Drawing.Point(662, 26);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(91, 30);
             this.btnActualizar.TabIndex = 17;
@@ -201,7 +201,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.Red;
             this.btnEliminar.Location = new System.Drawing.Point(28, 274);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(91, 46);
             this.btnEliminar.TabIndex = 18;
@@ -213,7 +213,7 @@
             // 
             this.btnOrdenar.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdenar.Location = new System.Drawing.Point(662, 61);
-            this.btnOrdenar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrdenar.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrdenar.Name = "btnOrdenar";
             this.btnOrdenar.Size = new System.Drawing.Size(91, 31);
             this.btnOrdenar.TabIndex = 19;
@@ -225,7 +225,7 @@
             // 
             this.btnAgregarCopia.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCopia.Location = new System.Drawing.Point(28, 98);
-            this.btnAgregarCopia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarCopia.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarCopia.Name = "btnAgregarCopia";
             this.btnAgregarCopia.Size = new System.Drawing.Size(91, 58);
             this.btnAgregarCopia.TabIndex = 20;
@@ -243,8 +243,8 @@
             this.Controls.Add(this.btnOrdenar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.btnNombre);
-            this.Controls.Add(this.btnDNI);
+            this.Controls.Add(this.btnTitulo);
+            this.Controls.Add(this.btnCodigo);
             this.Controls.Add(this.listPeliculas);
             this.Controls.Add(this.txtGenero);
             this.Controls.Add(this.txtTitulo);
@@ -254,11 +254,11 @@
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnApellido);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.btnGenero);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormPeliculas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Peliculas";
+            this.Text = "Películas";
             this.Load += new System.EventHandler(this.FormPeliculas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -267,7 +267,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnApellido;
+        private System.Windows.Forms.Button btnGenero;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCodigo;
@@ -277,8 +277,8 @@
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.TextBox txtGenero;
         private System.Windows.Forms.ListBox listPeliculas;
-        private System.Windows.Forms.Button btnDNI;
-        private System.Windows.Forms.Button btnNombre;
+        private System.Windows.Forms.Button btnCodigo;
+        private System.Windows.Forms.Button btnTitulo;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnOrdenar;

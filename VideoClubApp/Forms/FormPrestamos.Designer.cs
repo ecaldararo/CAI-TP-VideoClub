@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnApellido = new System.Windows.Forms.Button();
+            this.btnCliente = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.btnAgregarPrestamo = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.listPrestamos = new System.Windows.Forms.ListBox();
-            this.btnDNI = new System.Windows.Forms.Button();
-            this.btnNombre = new System.Windows.Forms.Button();
+            this.btnId = new System.Windows.Forms.Button();
+            this.btnTítulo = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnOrdenar = new System.Windows.Forms.Button();
             this.btnRecibirPrestamo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnApellido
+            // btnCliente
             // 
-            this.btnApellido.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApellido.Location = new System.Drawing.Point(579, 48);
-            this.btnApellido.Margin = new System.Windows.Forms.Padding(2);
-            this.btnApellido.Name = "btnApellido";
-            this.btnApellido.Size = new System.Drawing.Size(51, 34);
-            this.btnApellido.TabIndex = 1;
-            this.btnApellido.Text = "Buscar";
-            this.btnApellido.UseVisualStyleBackColor = true;
-            this.btnApellido.Click += new System.EventHandler(this.btnApellido_Click);
+            this.btnCliente.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCliente.Location = new System.Drawing.Point(579, 48);
+            this.btnCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(51, 34);
+            this.btnCliente.TabIndex = 1;
+            this.btnCliente.Text = "Buscar";
+            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnApellido_Click);
             // 
             // btnModificar
             // 
@@ -78,19 +78,19 @@
             this.label1.Location = new System.Drawing.Point(143, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 18);
+            this.label1.Size = new System.Drawing.Size(82, 18);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Código";
+            this.label1.Text = "ID Préstamo";
             // 
-            // txtCodigo
+            // txtId
             // 
-            this.txtCodigo.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(146, 53);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(101, 29);
-            this.txtCodigo.TabIndex = 6;
-            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
+            this.txtId.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(146, 53);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(101, 29);
+            this.txtId.TabIndex = 6;
+            this.txtId.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // btnAgregarPrestamo
             // 
@@ -159,29 +159,29 @@
             this.listPrestamos.TabIndex = 14;
             this.listPrestamos.SelectedIndexChanged += new System.EventHandler(this.listPeliculas_SelectedIndexChanged);
             // 
-            // btnDNI
+            // btnId
             // 
-            this.btnDNI.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDNI.Location = new System.Drawing.Point(250, 48);
-            this.btnDNI.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDNI.Name = "btnDNI";
-            this.btnDNI.Size = new System.Drawing.Size(51, 34);
-            this.btnDNI.TabIndex = 15;
-            this.btnDNI.Text = "Buscar";
-            this.btnDNI.UseVisualStyleBackColor = true;
-            this.btnDNI.Click += new System.EventHandler(this.btnDNI_Click);
+            this.btnId.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnId.Location = new System.Drawing.Point(250, 48);
+            this.btnId.Margin = new System.Windows.Forms.Padding(2);
+            this.btnId.Name = "btnId";
+            this.btnId.Size = new System.Drawing.Size(51, 34);
+            this.btnId.TabIndex = 15;
+            this.btnId.Text = "Buscar";
+            this.btnId.UseVisualStyleBackColor = true;
+            this.btnId.Click += new System.EventHandler(this.btnDNI_Click);
             // 
-            // btnNombre
+            // btnTítulo
             // 
-            this.btnNombre.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNombre.Location = new System.Drawing.Point(413, 48);
-            this.btnNombre.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNombre.Name = "btnNombre";
-            this.btnNombre.Size = new System.Drawing.Size(51, 34);
-            this.btnNombre.TabIndex = 16;
-            this.btnNombre.Text = "Buscar";
-            this.btnNombre.UseVisualStyleBackColor = true;
-            this.btnNombre.Click += new System.EventHandler(this.btnNombre_Click);
+            this.btnTítulo.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTítulo.Location = new System.Drawing.Point(413, 48);
+            this.btnTítulo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTítulo.Name = "btnTítulo";
+            this.btnTítulo.Size = new System.Drawing.Size(51, 34);
+            this.btnTítulo.TabIndex = 16;
+            this.btnTítulo.Text = "Buscar";
+            this.btnTítulo.UseVisualStyleBackColor = true;
+            this.btnTítulo.Click += new System.EventHandler(this.btnNombre_Click);
             // 
             // btnActualizar
             // 
@@ -243,18 +243,18 @@
             this.Controls.Add(this.btnOrdenar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.btnNombre);
-            this.Controls.Add(this.btnDNI);
+            this.Controls.Add(this.btnTítulo);
+            this.Controls.Add(this.btnId);
             this.Controls.Add(this.listPrestamos);
             this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnAgregarPrestamo);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnApellido);
+            this.Controls.Add(this.btnCliente);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormPrestamos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -267,18 +267,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnApellido;
+        private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btnAgregarPrestamo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.ListBox listPrestamos;
-        private System.Windows.Forms.Button btnDNI;
-        private System.Windows.Forms.Button btnNombre;
+        private System.Windows.Forms.Button btnId;
+        private System.Windows.Forms.Button btnTítulo;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnOrdenar;

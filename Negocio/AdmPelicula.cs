@@ -12,9 +12,11 @@ namespace Negocio
     {
         private PeliculaMapper _peliculaMapper;
         private Pelicula _pelicula;
+        private List<Pelicula> _peliculas;
         public AdmPelicula()
         {
             _peliculaMapper = new PeliculaMapper();
+            _peliculas = new List<Pelicula>();
         }
 
         public void Alta(Pelicula pel)
@@ -60,26 +62,49 @@ namespace Negocio
             throw new NotImplementedException();
         }
 
-        public object TraerTodosOrdenadosPorId()
+        public List<Pelicula> TraerTodosOrdenadosPorTitulo()
         {
-            throw new NotImplementedException();
+            _peliculas = TraerPeliculas();
+
+            List<Pelicula> _peliculasOrdenadas = new List<Pelicula>();
+            
+            _peliculasOrdenadas = _peliculas.OrderBy(x => x.Titulo).ToList();
+
+            return _peliculasOrdenadas;
+
         }
 
-        public object TraerPorGenero(string text)
+        public List<Pelicula> TraerPorGenero(string text)
         {
-            throw new NotImplementedException();
+            _peliculas = TraerPeliculas();
+
+            List<Pelicula> _peliculasSeleccionadas = new List<Pelicula>();
+
+            _peliculasSeleccionadas = _peliculas.Where(x => x.Genero == text).ToList();
+
+            return _peliculasSeleccionadas;
         }
 
-        public object TraerPorTitulo(string text)
+        public List<Pelicula> TraerPorTitulo(string text)
         {
-            throw new NotImplementedException();
+            _peliculas = TraerPeliculas();
+
+            List<Pelicula> _peliculasSeleccionadas = new List<Pelicula>();
+
+            _peliculasSeleccionadas = _peliculas.Where(x => x.Titulo == text).ToList();
+
+            return _peliculasSeleccionadas;
         }
 
-        
-
-        public object TraerPorCodigo(int v)
+        public List<Pelicula> TraerPorCodigo(int cod)
         {
-            throw new NotImplementedException();
+            _peliculas = TraerPeliculas();
+
+            List<Pelicula> _peliculasSeleccionadas = new List<Pelicula>();
+
+            _peliculasSeleccionadas = _peliculas.Where(x => x.Id == cod).ToList();
+
+            return _peliculasSeleccionadas;
         }
     }
 }

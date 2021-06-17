@@ -47,10 +47,9 @@ namespace VideoClubApp
             // 
             this.botonPeliculas.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.botonPeliculas.Font = new System.Drawing.Font("Oswald", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonPeliculas.Location = new System.Drawing.Point(3, 92);
-            this.botonPeliculas.Margin = new System.Windows.Forms.Padding(4);
+            this.botonPeliculas.Location = new System.Drawing.Point(2, 75);
             this.botonPeliculas.Name = "botonPeliculas";
-            this.botonPeliculas.Size = new System.Drawing.Size(212, 64);
+            this.botonPeliculas.Size = new System.Drawing.Size(159, 52);
             this.botonPeliculas.TabIndex = 17;
             this.botonPeliculas.Text = "Películas";
             this.botonPeliculas.UseVisualStyleBackColor = false;
@@ -60,10 +59,9 @@ namespace VideoClubApp
             // 
             this.botonPrestamos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.botonPrestamos.Font = new System.Drawing.Font("Oswald", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonPrestamos.Location = new System.Drawing.Point(3, 164);
-            this.botonPrestamos.Margin = new System.Windows.Forms.Padding(4);
+            this.botonPrestamos.Location = new System.Drawing.Point(2, 133);
             this.botonPrestamos.Name = "botonPrestamos";
-            this.botonPrestamos.Size = new System.Drawing.Size(212, 62);
+            this.botonPrestamos.Size = new System.Drawing.Size(159, 50);
             this.botonPrestamos.TabIndex = 18;
             this.botonPrestamos.Text = "Préstamos";
             this.botonPrestamos.UseVisualStyleBackColor = false;
@@ -73,10 +71,9 @@ namespace VideoClubApp
             // 
             this.botonClientes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.botonClientes.Font = new System.Drawing.Font("Oswald", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonClientes.Location = new System.Drawing.Point(3, 234);
-            this.botonClientes.Margin = new System.Windows.Forms.Padding(4);
+            this.botonClientes.Location = new System.Drawing.Point(2, 190);
             this.botonClientes.Name = "botonClientes";
-            this.botonClientes.Size = new System.Drawing.Size(212, 62);
+            this.botonClientes.Size = new System.Drawing.Size(159, 50);
             this.botonClientes.TabIndex = 21;
             this.botonClientes.Text = "Clientes";
             this.botonClientes.UseVisualStyleBackColor = false;
@@ -86,10 +83,9 @@ namespace VideoClubApp
             // 
             this.botonReportes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.botonReportes.Font = new System.Drawing.Font("Oswald", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonReportes.Location = new System.Drawing.Point(3, 304);
-            this.botonReportes.Margin = new System.Windows.Forms.Padding(4);
+            this.botonReportes.Location = new System.Drawing.Point(2, 247);
             this.botonReportes.Name = "botonReportes";
-            this.botonReportes.Size = new System.Drawing.Size(212, 62);
+            this.botonReportes.Size = new System.Drawing.Size(159, 50);
             this.botonReportes.TabIndex = 20;
             this.botonReportes.Text = "Reportes";
             this.botonReportes.UseVisualStyleBackColor = false;
@@ -106,8 +102,9 @@ namespace VideoClubApp
             this.panelIzquierdo.Controls.Add(this.botonReportes);
             this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
+            this.panelIzquierdo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelIzquierdo.Name = "panelIzquierdo";
-            this.panelIzquierdo.Size = new System.Drawing.Size(222, 567);
+            this.panelIzquierdo.Size = new System.Drawing.Size(167, 461);
             this.panelIzquierdo.TabIndex = 22;
             // 
             // label1
@@ -116,9 +113,10 @@ namespace VideoClubApp
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Oswald", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(39, 18);
+            this.label1.Location = new System.Drawing.Point(29, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 51);
+            this.label1.Size = new System.Drawing.Size(117, 41);
             this.label1.TabIndex = 22;
             this.label1.Text = "VideoClub";
             // 
@@ -127,39 +125,41 @@ namespace VideoClubApp
             this.panelSuperior.BackColor = System.Drawing.SystemColors.Window;
             this.panelSuperior.Controls.Add(this.tituloPrincipal);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSuperior.Location = new System.Drawing.Point(222, 0);
+            this.panelSuperior.Location = new System.Drawing.Point(167, 0);
+            this.panelSuperior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(1207, 69);
+            this.panelSuperior.Size = new System.Drawing.Size(884, 56);
             this.panelSuperior.TabIndex = 23;
             // 
             // tituloPrincipal
             // 
             this.tituloPrincipal.AutoSize = true;
             this.tituloPrincipal.Font = new System.Drawing.Font("Montserrat ExtraBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tituloPrincipal.Location = new System.Drawing.Point(392, 19);
+            this.tituloPrincipal.Location = new System.Drawing.Point(294, 15);
+            this.tituloPrincipal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tituloPrincipal.Name = "tituloPrincipal";
-            this.tituloPrincipal.Size = new System.Drawing.Size(0, 41);
+            this.tituloPrincipal.Size = new System.Drawing.Size(0, 33);
             this.tituloPrincipal.TabIndex = 0;
             // 
             // panelInteraccion
             // 
             this.panelInteraccion.BackColor = System.Drawing.SystemColors.Window;
             this.panelInteraccion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelInteraccion.Location = new System.Drawing.Point(222, 69);
+            this.panelInteraccion.Location = new System.Drawing.Point(167, 56);
+            this.panelInteraccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelInteraccion.Name = "panelInteraccion";
-            this.panelInteraccion.Size = new System.Drawing.Size(1207, 498);
+            this.panelInteraccion.Size = new System.Drawing.Size(884, 405);
             this.panelInteraccion.TabIndex = 24;
             this.panelInteraccion.Paint += new System.Windows.Forms.PaintEventHandler(this.panelInteraccion_Paint);
             // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1429, 567);
+            this.ClientSize = new System.Drawing.Size(1051, 461);
             this.Controls.Add(this.panelInteraccion);
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.panelIzquierdo);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormPrincipal";
             this.Text = "Form1";
             this.panelIzquierdo.ResumeLayout(false);
