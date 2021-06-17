@@ -30,11 +30,6 @@ namespace VideoClubApp.Forms
 
         }
 
-        //private void button4_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
         private void FormClientes_Load(object sender, EventArgs e)
         {
             TraerTodos();
@@ -181,6 +176,11 @@ namespace VideoClubApp.Forms
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

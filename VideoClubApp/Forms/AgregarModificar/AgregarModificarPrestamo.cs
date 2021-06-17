@@ -18,5 +18,10 @@ namespace VideoClubApp.Forms.AgregarModificar
         {
             InitializeComponent();
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

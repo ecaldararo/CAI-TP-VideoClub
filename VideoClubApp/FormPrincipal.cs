@@ -45,8 +45,8 @@ namespace VideoClubApp
 
         private void botonPrestamos_Click(object sender, EventArgs e)
         {
-            //formPrestamos = new FormPrestamos();
-            //abrirFormInteractivo(formPrestamos, sender);
+            formPrestamos = new FormPrestamos();
+            abrirFormInteractivo(formPrestamos, sender);
         }
 
         private void panelInteraccion_Paint(object sender, PaintEventArgs e)

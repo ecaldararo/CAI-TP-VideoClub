@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PrestamoMapper.cs" />
     <Compile Include="PeliculaMapper.cs" />
     <Compile Include="TransactionResult.cs" />
     <Compile Include="ClientMapper.cs" />

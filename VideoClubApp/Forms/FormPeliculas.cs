@@ -211,5 +211,10 @@ namespace VideoClubApp.Forms
             frm.Owner = this;
             frm.Show();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

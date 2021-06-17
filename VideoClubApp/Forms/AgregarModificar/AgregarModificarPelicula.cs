@@ -22,6 +22,7 @@ namespace VideoClubApp.Forms.AgregarModificar
         public AgregarModificarPelicula()
         {
             InitializeComponent();
+            _admPelicula = new AdmPelicula();
         }
 
         public AgregarModificarPelicula(Pelicula pelicula)
@@ -65,8 +66,8 @@ namespace VideoClubApp.Forms.AgregarModificar
                 throw new Exception("Año Vacío");
             if (txtDuracion.Text == "")
                 throw new Exception("Duración Vacío");
-            //if (txtTitulo.Text == "")
-            //    throw new Exception("Título Vacío");
+            if (txtTitulo.Text == "")
+                throw new Exception("Título Vacío");
             //if (txtDirector.Text == "")
             //    throw new Exception("Director Vacío");
             //if (txtProductora.Text == "")
