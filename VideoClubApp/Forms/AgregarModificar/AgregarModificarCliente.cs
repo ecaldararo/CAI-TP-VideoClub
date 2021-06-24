@@ -42,7 +42,16 @@ namespace VideoClubApp.Forms.AgregarModificar
             txtApellido.Text = cliente.Apellido;
             txtDireccion.Text = cliente.Direccion;
             txtId.Text = cliente.Id.ToString();
-            dateTimeNac.Value = cliente.FechaNacimiento;
+            
+            try
+            {
+                dateTimeNac.Value = cliente.FechaNacimiento;
+            }
+            catch (Exception)
+            {
+                dateTimeNac.Value = DateTime.Now;
+                MessageBox.Show("Fecha de Nacimiento no registrada");
+            }
         }
 
         private void btnVolver_Click(object sender, EventArgs e)

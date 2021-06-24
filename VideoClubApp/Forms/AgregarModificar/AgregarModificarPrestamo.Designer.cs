@@ -93,6 +93,7 @@
             this.txtPlazo.Name = "txtPlazo";
             this.txtPlazo.Size = new System.Drawing.Size(121, 25);
             this.txtPlazo.TabIndex = 19;
+            this.txtPlazo.TextChanged += new System.EventHandler(this.txtPlazo_TextChanged);
             // 
             // label2
             // 

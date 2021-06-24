@@ -68,7 +68,7 @@ namespace VideoClubApp.Forms.AgregarModificar
                 if (encontro == false)
                     throw new NoHayCopiasDisponiblesException();
 
-                alta.IdCliente = ((Cliente)cmbCliente.SelectedItem).id;
+                alta.IdCliente = ((Cliente)cmbCliente.SelectedItem).Id;
                 alta.Plazo = Validaciones.ValidarInt(txtPlazo.Text);
                 alta.FechaPrestamo = dateTimePrestamo.Value;
                 alta.FechaDevolucionTentativa = dateTimeTentativa.Value;
@@ -121,6 +121,12 @@ namespace VideoClubApp.Forms.AgregarModificar
         private void cmbPelicula_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPlazo_TextChanged(object sender, EventArgs e)
+        {
+            dateTimeTentativa.Value = dateTimePrestamo.Value.AddDays(Validaciones.ValidarInt(txtPlazo.Text));
+            
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Entidades
     [DataContract]
     public class Cliente : Persona
     {
-        public int id;
+        public int _id;
         private int _idCliente;
         private string _estado;
         private DateTime _fechaAlta;
@@ -21,24 +21,25 @@ namespace Entidades
             // Cliente sin parámetros para hacer el post?
         }
 
-        public Cliente(int dni, string nombre, string apellido, DateTime fechaNac)
+        public Cliente(int dni, string nombre, string apellido, string dir, DateTime fechaNac)
         {
             //id += 1;
-            Id = id;
-            IdCliente = dni;
-            Dni = dni;
-            Nombre = nombre;
-            Apellido = apellido;
+            Id = _id;
+            _idCliente = dni;
+            _dni = dni;
+            _nombre = nombre;
+            _apellido = apellido;
+            _direccion = dir;
             _estado = "Activo";
             _fechaAlta = DateTime.Now;
-            FechaNacimiento = fechaNac;
+            _fechaNacimiento = fechaNac;
         }
 
         [DataMember(Name = "id")]
-        public int Id { get => id; set => id = value; }
+        public int Id { get => _id; set => _id = value; }
 
         [DataMember(Name = "idCliente")]
-        public int IdCliente { get => _idCliente; set => _idCliente = value; }
+        public int IdCliente { get => _idCliente;  }
         
         [DataMember(Name = "direccion")]
         public string Direccion { get => _direccion; set => _direccion = value; }

@@ -19,8 +19,8 @@ namespace VideoClubApp
         private Form formPeliculas;
         private Form formPrestamos;
         private Form formClientes;
+        private Form formReportes;
 
-        private AdmCliente _admCliente;
         public FormPrincipal()
         {
             InitializeComponent();
@@ -69,6 +69,12 @@ namespace VideoClubApp
         private void tituloPrincipal_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void botonReportes_Click(object sender, EventArgs e)
+        {
+            formReportes = new FormReportes();
+            abrirFormInteractivo(formReportes, sender);
         }
     }
 }

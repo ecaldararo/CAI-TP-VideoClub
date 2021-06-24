@@ -89,6 +89,7 @@ namespace VideoClubApp
             this.botonReportes.TabIndex = 20;
             this.botonReportes.Text = "Reportes";
             this.botonReportes.UseVisualStyleBackColor = false;
+            this.botonReportes.Click += new System.EventHandler(this.botonReportes_Click);
             // 
             // panelIzquierdo
             // 
@@ -102,7 +103,7 @@ namespace VideoClubApp
             this.panelIzquierdo.Controls.Add(this.botonReportes);
             this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
-            this.panelIzquierdo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelIzquierdo.Margin = new System.Windows.Forms.Padding(2);
             this.panelIzquierdo.Name = "panelIzquierdo";
             this.panelIzquierdo.Size = new System.Drawing.Size(167, 461);
             this.panelIzquierdo.TabIndex = 22;
@@ -126,7 +127,7 @@ namespace VideoClubApp
             this.panelSuperior.Controls.Add(this.tituloPrincipal);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSuperior.Location = new System.Drawing.Point(167, 0);
-            this.panelSuperior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSuperior.Margin = new System.Windows.Forms.Padding(2);
             this.panelSuperior.Name = "panelSuperior";
             this.panelSuperior.Size = new System.Drawing.Size(884, 56);
             this.panelSuperior.TabIndex = 23;
@@ -146,7 +147,7 @@ namespace VideoClubApp
             this.panelInteraccion.BackColor = System.Drawing.SystemColors.Window;
             this.panelInteraccion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInteraccion.Location = new System.Drawing.Point(167, 56);
-            this.panelInteraccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelInteraccion.Margin = new System.Windows.Forms.Padding(2);
             this.panelInteraccion.Name = "panelInteraccion";
             this.panelInteraccion.Size = new System.Drawing.Size(884, 405);
             this.panelInteraccion.TabIndex = 24;

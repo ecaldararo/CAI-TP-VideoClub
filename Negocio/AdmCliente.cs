@@ -75,12 +75,12 @@ namespace Negocio
 
         public TransactionResult Agregar(int dni,string nombre, string apellido,string direccion, DateTime fechaNac, bool activo)
         {
-            Cliente nuevoCliente = new Cliente();
-            nuevoCliente.Dni = dni;
-            nuevoCliente.Nombre = nombre;
-            nuevoCliente.Apellido = apellido;   
-            nuevoCliente.Direccion = direccion;
-            nuevoCliente.FechaNacimiento = fechaNac;
+            Cliente nuevoCliente = new Cliente(dni,nombre,apellido,direccion,fechaNac);
+            //nuevoCliente.Dni = dni;
+            //nuevoCliente.Nombre = nombre;
+            //nuevoCliente.Apellido = apellido;   
+            //nuevoCliente.Direccion = direccion;
+            //nuevoCliente.FechaNacimiento = fechaNac;
             nuevoCliente.Activo = activo;
 
             return _clientMapper.Insertar(nuevoCliente);

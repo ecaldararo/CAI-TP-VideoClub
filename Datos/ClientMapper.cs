@@ -80,7 +80,7 @@ namespace Datos
         private NameValueCollection ReverseMapActualizar(Cliente cliente)
         {
             NameValueCollection n = new NameValueCollection();
-            n.Add("id", cliente.id.ToString());
+            n.Add("id", cliente.Id.ToString());
             n.Add("nombre", cliente.Nombre);
             n.Add("apellido", cliente.Apellido); //cliente.Apellido
             n.Add("direccion", cliente.Direccion);

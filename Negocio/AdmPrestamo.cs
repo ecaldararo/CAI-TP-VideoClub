@@ -26,6 +26,13 @@ namespace Negocio
             return _prestamoMapper.TraerTodos();
         }
 
+        public List<Prestamo> TraerPrestamosAbiertos()
+        {
+            List<Prestamo> prestamosAbiertos = _prestamoMapper.TraerTodos().Where(x => x.Abierto == true).ToList();
+
+            return prestamosAbiertos;
+        }
+
         public List<Prestamo> TraerPorId(int id)
         {
             List<Prestamo> prestamos = _prestamoMapper.TraerTodos().Where(x => x.Id == id).ToList();

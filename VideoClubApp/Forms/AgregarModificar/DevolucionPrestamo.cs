@@ -56,7 +56,7 @@ namespace VideoClubApp.Forms.AgregarModificar
             try
             {
                 _admPrestamo.RegistrarDevolucion(_prestamoADevolver);
-                MessageBox.Show("Devolución Registrada");
+                MessageBox.Show("Devolución Registrada // No funciona el post para actualizar el estado");
                 this.Close();
             }
             catch (Exception ex)
