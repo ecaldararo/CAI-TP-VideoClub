@@ -51,5 +51,10 @@ namespace VideoClubApp.Forms
         {
 
         }
+
+        private void lstPeliculasDisponibles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

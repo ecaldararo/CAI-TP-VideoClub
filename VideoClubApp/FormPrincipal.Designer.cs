@@ -39,6 +39,7 @@ namespace VideoClubApp
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.tituloPrincipal = new System.Windows.Forms.Label();
             this.panelInteraccion = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelIzquierdo.SuspendLayout();
             this.panelSuperior.SuspendLayout();
             this.SuspendLayout();
@@ -96,6 +97,7 @@ namespace VideoClubApp
             this.panelIzquierdo.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.panelIzquierdo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelIzquierdo.BackgroundImage")));
             this.panelIzquierdo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelIzquierdo.Controls.Add(this.button1);
             this.panelIzquierdo.Controls.Add(this.label1);
             this.panelIzquierdo.Controls.Add(this.botonPrestamos);
             this.panelIzquierdo.Controls.Add(this.botonPeliculas);
@@ -153,6 +155,18 @@ namespace VideoClubApp
             this.panelInteraccion.TabIndex = 24;
             this.panelInteraccion.Paint += new System.Windows.Forms.PaintEventHandler(this.panelInteraccion_Paint);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Font = new System.Drawing.Font("Oswald", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(2, 414);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(159, 34);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Salir";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,6 +196,7 @@ namespace VideoClubApp
         private System.Windows.Forms.Label tituloPrincipal;
         private System.Windows.Forms.Panel panelInteraccion;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

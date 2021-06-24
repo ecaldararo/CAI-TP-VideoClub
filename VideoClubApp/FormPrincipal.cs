@@ -20,10 +20,12 @@ namespace VideoClubApp
         private Form formPrestamos;
         private Form formClientes;
         private Form formReportes;
+        private FormApps _formApps;
 
-        public FormPrincipal()
+        public FormPrincipal(FormApps form)
         {
             InitializeComponent();
+            _formApps = form;
         }
 
         private void abrirFormInteractivo(Form formHijo, object botonSender)
@@ -75,6 +77,12 @@ namespace VideoClubApp
         {
             formReportes = new FormReportes();
             abrirFormInteractivo(formReportes, sender);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            _formApps.Show();
         }
     }
 }

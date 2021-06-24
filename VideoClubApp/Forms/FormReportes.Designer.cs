@@ -33,8 +33,10 @@ namespace VideoClubApp.Forms
             this.tabPrestamosAbiertos = new System.Windows.Forms.TabPage();
             this.tabPeliculasDisponibles = new System.Windows.Forms.TabPage();
             this.lstPrestamosAbiertos = new System.Windows.Forms.ListBox();
+            this.lstPeliculasDisponibles = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPrestamosAbiertos.SuspendLayout();
+            this.tabPeliculasDisponibles.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -62,10 +64,11 @@ namespace VideoClubApp.Forms
             // 
             // tabPeliculasDisponibles
             // 
-            this.tabPeliculasDisponibles.Location = new System.Drawing.Point(4, 22);
+            this.tabPeliculasDisponibles.Controls.Add(this.lstPeliculasDisponibles);
+            this.tabPeliculasDisponibles.Location = new System.Drawing.Point(4, 26);
             this.tabPeliculasDisponibles.Name = "tabPeliculasDisponibles";
             this.tabPeliculasDisponibles.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPeliculasDisponibles.Size = new System.Drawing.Size(708, 332);
+            this.tabPeliculasDisponibles.Size = new System.Drawing.Size(708, 328);
             this.tabPeliculasDisponibles.TabIndex = 1;
             this.tabPeliculasDisponibles.Text = "Peliculas Disponibles";
             this.tabPeliculasDisponibles.UseVisualStyleBackColor = true;
@@ -81,6 +84,16 @@ namespace VideoClubApp.Forms
             this.lstPrestamosAbiertos.TabIndex = 0;
             this.lstPrestamosAbiertos.SelectedIndexChanged += new System.EventHandler(this.lstPrestamosAbiertos_SelectedIndexChanged);
             // 
+            // lstPeliculasDisponibles
+            // 
+            this.lstPeliculasDisponibles.FormattingEnabled = true;
+            this.lstPeliculasDisponibles.ItemHeight = 17;
+            this.lstPeliculasDisponibles.Location = new System.Drawing.Point(3, 3);
+            this.lstPeliculasDisponibles.Name = "lstPeliculasDisponibles";
+            this.lstPeliculasDisponibles.Size = new System.Drawing.Size(699, 310);
+            this.lstPeliculasDisponibles.TabIndex = 0;
+            this.lstPeliculasDisponibles.SelectedIndexChanged += new System.EventHandler(this.lstPeliculasDisponibles_SelectedIndexChanged);
+            // 
             // FormReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -93,6 +106,7 @@ namespace VideoClubApp.Forms
             this.Load += new System.EventHandler(this.FormReportes_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPrestamosAbiertos.ResumeLayout(false);
+            this.tabPeliculasDisponibles.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -103,5 +117,6 @@ namespace VideoClubApp.Forms
         private System.Windows.Forms.TabPage tabPrestamosAbiertos;
         private System.Windows.Forms.TabPage tabPeliculasDisponibles;
         private System.Windows.Forms.ListBox lstPrestamosAbiertos;
+        private System.Windows.Forms.ListBox lstPeliculasDisponibles;
     }
 }
