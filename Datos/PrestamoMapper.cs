@@ -47,7 +47,7 @@ namespace Datos
 
         public TransactionResult Actualizar(Prestamo prestamoAModificar)
         {
-            NameValueCollection obj = ReverseMapActualizar(prestamoAModificar);
+            NameValueCollection obj = ReverseMap(prestamoAModificar);
 
             string json = WebHelper.Post("/videoclub/prestamos", obj);
 

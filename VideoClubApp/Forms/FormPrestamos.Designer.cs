@@ -90,7 +90,7 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(101, 29);
             this.txtId.TabIndex = 6;
-            this.txtId.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // btnAgregarPrestamo
             // 

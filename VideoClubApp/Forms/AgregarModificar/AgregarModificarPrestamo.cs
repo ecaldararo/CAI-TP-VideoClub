@@ -17,14 +17,16 @@ namespace VideoClubApp.Forms.AgregarModificar
         private AdmPrestamo _admPrestamo;
         private AdmPelicula _admPeliculas;
         private AdmCliente _admClientes;
+        private List<Prestamo> _listaPrestamos;
 
-        public AgregarModificarPrestamo()
+        public AgregarModificarPrestamo(List<Prestamo> listaPrestamos)
         {
             InitializeComponent();
 
             _admPrestamo = new AdmPrestamo();
             _admPeliculas = new AdmPelicula();
             _admClientes = new AdmCliente();
+            _listaPrestamos = listaPrestamos;
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -36,7 +38,10 @@ namespace VideoClubApp.Forms.AgregarModificar
         {
             try
             {
-                
+                Pelicula peliculaSeleccionada = (Pelicula)cmbPelicula.SelectedItem;
+                Prestamo alta = new Prestamo();
+                alta.FechaPrestamo = dateTimePrestamo.Value;
+                //alta.IdCopia = _listaPrestamos.Where(x => x.copia.Id == (peliculaSeleccionada.copias.FirstOrDefault(x => x.Id)) // necesito una copia que no esté prestada, o sea, que no tenga algún prestamo abierto.
             }
             catch (Exception ex)
             {

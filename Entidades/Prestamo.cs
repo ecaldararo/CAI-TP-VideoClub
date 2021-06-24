@@ -25,11 +25,8 @@ namespace Entidades
         public Copia copia;
         public Cliente cliente;
 
-        [DataMember]
         private int idCopia;
-        [DataMember]
         private int idCliente;
-
         private int plazo;
         private bool abierto;
         private DateTime fechaPrestamo;
@@ -58,10 +55,13 @@ namespace Entidades
         [DataMember]
         public DateTime FechaDevolucionReal { get => fechaDevolucionReal; set => fechaDevolucionReal = value; }
 
-        [DataMember]
+        [DataMember(Name = "id")]
         public int Id { get => id; set => id = value; }
 
+        [DataMember(Name = "idCopia")]
         public int IdCopia { get => idCopia; set => idCopia = value; }
+
+        [DataMember(Name="idCliente")]
         public int IdCliente { get => idCliente; set => idCliente = value; }
 
         public override string ToString()

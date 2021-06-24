@@ -33,14 +33,26 @@ namespace VideoClubApp.Forms.AgregarModificar
 
         private void DevolucionPrestamo_Load(object sender, EventArgs e)
         {
+            try
+            {
+                //if (_prestamoADevolver.FechaDevolucionTentativa == Convert.ToDateTime("0001-01-01T00:00:00"))
+                //    dateTimeDevolucion.Value = DateTime.Now;
+                //else
+                    dateTimeDevolucion.Value = _prestamoADevolver.FechaDevolucionTentativa;
+            }
+            catch (Exception)
+            {
+                dateTimeDevolucion.Value = DateTime.Now;
+                //MessageBox.Show(ex.Message);
+            }
 
-            dateTimeDevolucion.Value = _prestamoADevolver.FechaDevolucionTentativa;
         }
 
         private void btnDevolver_Click(object sender, EventArgs e)
         {
             _prestamoADevolver.Abierto = false;
             _prestamoADevolver.FechaDevolucionReal = dateTimeDevolucion.Value;
+            _prestamoADevolver.IdCliente = _prestamoADevolver.IdCliente;
             try
             {
                 _admPrestamo.RegistrarDevolucion(_prestamoADevolver);
