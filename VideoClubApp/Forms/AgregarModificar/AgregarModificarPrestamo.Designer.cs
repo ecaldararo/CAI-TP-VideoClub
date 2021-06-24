@@ -32,7 +32,7 @@
             this.btnVolver = new System.Windows.Forms.Button();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPlazo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbPelicula = new System.Windows.Forms.ComboBox();
             this.dateTimePrestamo = new System.Windows.Forms.DateTimePicker();
@@ -86,13 +86,13 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Cliente";
             // 
-            // textBox1
+            // txtPlazo
             // 
-            this.textBox1.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(261, 110);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 25);
-            this.textBox1.TabIndex = 19;
+            this.txtPlazo.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlazo.Location = new System.Drawing.Point(261, 110);
+            this.txtPlazo.Name = "txtPlazo";
+            this.txtPlazo.Size = new System.Drawing.Size(121, 25);
+            this.txtPlazo.TabIndex = 19;
             // 
             // label2
             // 
@@ -171,7 +171,7 @@
             this.Controls.Add(this.dateTimePrestamo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbPelicula);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPlazo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.btnVolver);
@@ -190,7 +190,7 @@
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.ComboBox cmbCliente;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPlazo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbPelicula;
         private System.Windows.Forms.DateTimePicker dateTimePrestamo;
