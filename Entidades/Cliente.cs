@@ -66,5 +66,10 @@ namespace Entidades
 
             return $"Id:{Id})  {Apellido}, {Nombre} (DNI:{Dni}) - Nac: {FechaNacimiento.ToString("yyyy-MM-dd")} - Fecha Alta: {_fechaAlta.ToString("yyyy-MM-dd")} - Estado: {activo}";
         }
+
+        public string DescripcionCombo
+        {
+            get => $"Id:{Id})  {Apellido}, {Nombre}";
+        }
     }
 }

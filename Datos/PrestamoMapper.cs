@@ -43,17 +43,17 @@ namespace Datos
             return resultado;
         }
 
-        
 
-        //public TransactionResult Actualizar(Prestamo prestamoAModificar)
-        //{
-        //    NameValueCollection obj = ReverseMapActualizar(prestamoAModificar);
 
-        //    string json = WebHelper.Put("/videoclub/prestamos/" + prestamoAModificar.Id.ToString(), obj);
+        public TransactionResult Actualizar(Prestamo prestamoAModificar)
+        {
+            NameValueCollection obj = ReverseMapActualizar(prestamoAModificar);
 
-        //    TransactionResult resultado = JsonConvert.DeserializeObject<TransactionResult>(json);
-        //    return resultado;
-        //}
+            string json = WebHelper.Post("/videoclub/prestamos", obj);
+
+            TransactionResult resultado = JsonConvert.DeserializeObject<TransactionResult>(json);
+            return resultado;
+        }
 
         public TransactionResult Eliminar(Prestamo prestamoAEliminar)
         {
@@ -75,16 +75,18 @@ namespace Datos
             n.Add("abierto", prestamo.Abierto.ToString());
             n.Add("fechaPrestamo", prestamo.FechaPrestamo.ToString("yyyy-MM-dd"));
             n.Add("fechaDevolucionTentativa", prestamo.FechaDevolucionTentativa.ToString("yyyy-MM-dd"));
-            //n.Add("fechaDevolucionReal", prestamo.FechaDevolucionReal.ToString("yyyy-MM-dd"));
+            n.Add("fechaDevolucionReal", prestamo.FechaDevolucionReal.ToString("yyyy-MM-dd"));
             return n;
         }
 
-        //private NameValueCollection ReverseMapActualizar(Prestamo prestamo)
-        //{
-        //    NameValueCollection n = new NameValueCollection();
-        //    n.Add("id", prestamo.Id.ToString());
-        //    return n;
-        //}
+        private NameValueCollection ReverseMapActualizar(Prestamo prestamo)
+        {
+            NameValueCollection n = new NameValueCollection();
+            n.Add("id", prestamo.Id.ToString());
+            n.Add("abierto", prestamo.Abierto.ToString());
+            n.Add("fechaDevolucionReal", prestamo.FechaDevolucionReal.ToString("yyyy-MM-dd"));
+            return n;
+        }
 
 
     }

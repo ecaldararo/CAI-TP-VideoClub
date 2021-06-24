@@ -56,7 +56,7 @@
             this.btnCliente.TabIndex = 1;
             this.btnCliente.Text = "Buscar";
             this.btnCliente.UseVisualStyleBackColor = true;
-            this.btnCliente.Click += new System.EventHandler(this.btnApellido_Click);
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // btnModificar
             // 
@@ -145,7 +145,7 @@
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(101, 29);
             this.txtCliente.TabIndex = 13;
-            this.txtCliente.TextChanged += new System.EventHandler(this.txtGenero_TextChanged);
+            this.txtCliente.TextChanged += new System.EventHandler(this.txtCliente_TextChanged);
             // 
             // listPrestamos
             // 
@@ -157,7 +157,7 @@
             this.listPrestamos.Name = "listPrestamos";
             this.listPrestamos.Size = new System.Drawing.Size(607, 225);
             this.listPrestamos.TabIndex = 14;
-            this.listPrestamos.SelectedIndexChanged += new System.EventHandler(this.listPeliculas_SelectedIndexChanged);
+            this.listPrestamos.SelectedIndexChanged += new System.EventHandler(this.listPrestamos_SelectedIndexChanged);
             // 
             // btnId
             // 
@@ -169,7 +169,7 @@
             this.btnId.TabIndex = 15;
             this.btnId.Text = "Buscar";
             this.btnId.UseVisualStyleBackColor = true;
-            this.btnId.Click += new System.EventHandler(this.btnDNI_Click);
+            this.btnId.Click += new System.EventHandler(this.btnId_Click);
             // 
             // btnTítulo
             // 
@@ -181,7 +181,7 @@
             this.btnTítulo.TabIndex = 16;
             this.btnTítulo.Text = "Buscar";
             this.btnTítulo.UseVisualStyleBackColor = true;
-            this.btnTítulo.Click += new System.EventHandler(this.btnNombre_Click);
+            this.btnTítulo.Click += new System.EventHandler(this.btnTitulo_Click);
             // 
             // btnActualizar
             // 

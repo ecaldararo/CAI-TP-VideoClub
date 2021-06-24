@@ -38,10 +38,9 @@ namespace VideoClubApp.Forms.AgregarModificar
         {
             try
             {
-                Copia nuevaCopia = new Copia();
+                Copia nuevaCopia = new Copia(txtObservaciones.Text);
                 nuevaCopia.IdPelicula = _pelicula.Id;
-                nuevaCopia.Observaciones = txtObservaciones.Text;
-                nuevaCopia.FechaAlta = DateTime.Now;
+                //nuevaCopia.FechaAlta = DateTime.Now;
 
                 int rdo = 0;
                 int cant = Validaciones.ValidarInt(txtCantidad.Text);

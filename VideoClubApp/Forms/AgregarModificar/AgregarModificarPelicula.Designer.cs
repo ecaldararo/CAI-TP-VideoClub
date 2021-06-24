@@ -48,7 +48,7 @@
             // 
             this.txtAnio.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnio.Location = new System.Drawing.Point(132, 41);
-            this.txtAnio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAnio.Margin = new System.Windows.Forms.Padding(2);
             this.txtAnio.Name = "txtAnio";
             this.txtAnio.Size = new System.Drawing.Size(199, 25);
             this.txtAnio.TabIndex = 0;
@@ -79,7 +79,7 @@
             // 
             this.txtDuracion.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDuracion.Location = new System.Drawing.Point(132, 80);
-            this.txtDuracion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDuracion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDuracion.Name = "txtDuracion";
             this.txtDuracion.Size = new System.Drawing.Size(199, 25);
             this.txtDuracion.TabIndex = 2;
@@ -99,7 +99,7 @@
             // 
             this.txtTitulo.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTitulo.Location = new System.Drawing.Point(132, 119);
-            this.txtTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTitulo.Margin = new System.Windows.Forms.Padding(2);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(199, 25);
             this.txtTitulo.TabIndex = 4;
@@ -119,7 +119,7 @@
             // 
             this.txtDirector.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDirector.Location = new System.Drawing.Point(132, 158);
-            this.txtDirector.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDirector.Margin = new System.Windows.Forms.Padding(2);
             this.txtDirector.Name = "txtDirector";
             this.txtDirector.Size = new System.Drawing.Size(199, 25);
             this.txtDirector.TabIndex = 6;
@@ -139,7 +139,7 @@
             // 
             this.txtProductora.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProductora.Location = new System.Drawing.Point(132, 199);
-            this.txtProductora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProductora.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductora.Name = "txtProductora";
             this.txtProductora.Size = new System.Drawing.Size(199, 25);
             this.txtProductora.TabIndex = 8;
@@ -159,7 +159,7 @@
             // 
             this.txtGenero.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGenero.Location = new System.Drawing.Point(132, 242);
-            this.txtGenero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGenero.Margin = new System.Windows.Forms.Padding(2);
             this.txtGenero.Name = "txtGenero";
             this.txtGenero.Size = new System.Drawing.Size(199, 25);
             this.txtGenero.TabIndex = 10;
@@ -168,7 +168,7 @@
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(190, 286);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(141, 41);
             this.btnAgregar.TabIndex = 14;
@@ -180,7 +180,7 @@
             // 
             this.btnVolver.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.Location = new System.Drawing.Point(57, 294);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(79, 33);
             this.btnVolver.TabIndex = 15;
@@ -207,9 +207,10 @@
             this.Controls.Add(this.txtDuracion);
             this.Controls.Add(this.lblAnio);
             this.Controls.Add(this.txtAnio);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AgregarModificarPelicula";
             this.Text = "Agregar/Modificar Pelicula";
+            this.Load += new System.EventHandler(this.AgregarModificarPelicula_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

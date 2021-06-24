@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio;
 using Entidades;
+using Entidades.Exceptions;
 
 namespace VideoClubApp.Forms.AgregarModificar
 {
@@ -46,13 +47,17 @@ namespace VideoClubApp.Forms.AgregarModificar
                 Pelicula pel = new Pelicula();
                 pel.Anio = Validaciones.ValidarInt(txtAnio.Text);
                 pel.Duracion = Validaciones.ValidarInt(txtDuracion.Text);
-                pel.Titulo = txtTitulo.Text;
+                pel.Titulo = Validaciones.ValidarStringNoVac(txtTitulo.Text);
                 pel.Director = txtDirector.Text;
                 pel.Productora = txtProductora.Text;
                 pel.Genero = txtGenero.Text;
                 _admPelicula.Alta(pel);
                 MessageBox.Show(pel.Titulo + " agregada");
 
+            }
+            catch (EmptyStringException esex)
+            {
+                MessageBox.Show(esex.Message);
             }
             catch (Exception ex)
             {
@@ -76,6 +81,11 @@ namespace VideoClubApp.Forms.AgregarModificar
             //    throw new Exception("Genero Vacío");
             //if (txtId.Text == "")
             //    throw new Exception("Id Vacío");
+        }
+
+        private void AgregarModificarPelicula_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -45,13 +45,14 @@
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(320, 216);
+            this.btnAgregar.Location = new System.Drawing.Point(434, 216);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(141, 41);
             this.btnAgregar.TabIndex = 15;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnVolver
             // 
@@ -67,11 +68,12 @@
             // 
             // cmbCliente
             // 
+            this.cmbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCliente.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.Location = new System.Drawing.Point(261, 78);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(121, 26);
+            this.cmbCliente.Size = new System.Drawing.Size(314, 26);
             this.cmbCliente.TabIndex = 17;
             // 
             // label1
@@ -104,25 +106,27 @@
             // 
             // cmbPelicula
             // 
+            this.cmbPelicula.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPelicula.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPelicula.FormattingEnabled = true;
             this.cmbPelicula.Location = new System.Drawing.Point(261, 46);
             this.cmbPelicula.Name = "cmbPelicula";
-            this.cmbPelicula.Size = new System.Drawing.Size(121, 26);
+            this.cmbPelicula.Size = new System.Drawing.Size(314, 26);
             this.cmbPelicula.TabIndex = 20;
+            this.cmbPelicula.SelectedIndexChanged += new System.EventHandler(this.cmbPelicula_SelectedIndexChanged);
             // 
             // dateTimePrestamo
             // 
             this.dateTimePrestamo.Location = new System.Drawing.Point(261, 141);
             this.dateTimePrestamo.Name = "dateTimePrestamo";
-            this.dateTimePrestamo.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePrestamo.Size = new System.Drawing.Size(314, 20);
             this.dateTimePrestamo.TabIndex = 22;
             // 
             // dateTimeTentativa
             // 
             this.dateTimeTentativa.Location = new System.Drawing.Point(261, 167);
             this.dateTimeTentativa.Name = "dateTimeTentativa";
-            this.dateTimeTentativa.Size = new System.Drawing.Size(200, 20);
+            this.dateTimeTentativa.Size = new System.Drawing.Size(314, 20);
             this.dateTimeTentativa.TabIndex = 23;
             // 
             // label3
@@ -159,7 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 301);
+            this.ClientSize = new System.Drawing.Size(659, 301);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -174,6 +178,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Name = "AgregarModificarPrestamo";
             this.Text = "AgregarModificarPrestamo";
+            this.Load += new System.EventHandler(this.AgregarModificarPrestamo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

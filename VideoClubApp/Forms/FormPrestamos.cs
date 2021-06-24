@@ -25,7 +25,7 @@ namespace VideoClubApp.Forms
         private AdmCliente _admClientes;
         private List<Cliente> _clientes;
 
-        //private Pelicula _pelicula;
+        private Prestamo _prestamoSeleccionado;
         public FormPrestamos()
         {
             InitializeComponent();
@@ -84,17 +84,14 @@ namespace VideoClubApp.Forms
             }
         }
 
-        private void listPeliculas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //_peliculaSeleccionada = (Pelicula)listPrestamos.SelectedValue;
-        }
+        
 
-        private void btnDNI_Click(object sender, EventArgs e)
+        private void btnId_Click(object sender, EventArgs e)
         {
             try
             {
                 listPrestamos.DataSource = null;
-                //listPrestamos.DataSource = _admPrestamo.TraerPorCodigo(Validaciones.ValidarInt(txtCodigo.Text));
+                listPrestamos.DataSource = _admPrestamo.TraerPorId(Validaciones.ValidarInt(txtId.Text));
             }
             catch (Exception ex)
             {
@@ -103,13 +100,13 @@ namespace VideoClubApp.Forms
             
         }
 
-        private void btnNombre_Click(object sender, EventArgs e)
+        private void btnTitulo_Click(object sender, EventArgs e)
         {
             try
             {
                 ValidarNombre();
                 listPrestamos.DataSource = null;
-                //listPrestamos.DataSource = _admPrestamo.TraerPorTitulo(txtTitulo.Text);
+                listPrestamos.DataSource = _admPrestamo.TraerPorTitulo(Validaciones.ValidarInt(txtId.Text));
             }
             catch (Exception ex)
             {
@@ -123,12 +120,12 @@ namespace VideoClubApp.Forms
                 throw new Exception("Debe ingresar un Nombre");
         }
 
-        private void btnApellido_Click(object sender, EventArgs e)
+        private void btnCliente_Click(object sender, EventArgs e)
         {
             
             try
             {
-                ValidarApellido();
+                ValidarCliente();
                 listPrestamos.DataSource = null;
                 //listPrestamos.DataSource = _admPrestamo.TraerPorGenero(txtCliente.Text);
             }
@@ -138,7 +135,7 @@ namespace VideoClubApp.Forms
             }
         }
 
-        public void ValidarApellido()
+        public void ValidarCliente()
         {
             if (txtCliente.Text == "")
                 throw new Exception("Debe ingresar un Apellido");
@@ -151,19 +148,19 @@ namespace VideoClubApp.Forms
             frm.Show();
         }
 
-        private void txtGenero_TextChanged(object sender, EventArgs e)
+        private void txtCliente_TextChanged(object sender, EventArgs e)
         {
-            btnApellido_Click(sender, e);
+            btnCliente_Click(sender, e);
         }
 
         private void txtCodigo_TextChanged(object sender, EventArgs e)
         {
-            btnDNI_Click(sender, e);
+            btnId_Click(sender, e);
         }
 
         private void txtTitulo_TextChanged(object sender, EventArgs e)
         {
-            btnNombre_Click(sender, e);
+            btnTitulo_Click(sender, e);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -183,9 +180,9 @@ namespace VideoClubApp.Forms
 
         private void btnRecibirPrestamo_Click(object sender, EventArgs e)
         {
-            //AgregarModificarPrestamo frm = new AgregarModificarPrestamo();
-            //frm.Owner = this;
-            //frm.Show();
+            DevolucionPrestamo frm = new DevolucionPrestamo(_prestamoSeleccionado);
+            frm.Owner = this;
+            frm.Show();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -227,6 +224,14 @@ namespace VideoClubApp.Forms
 
         }
 
-        
+        private void listPrestamos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _prestamoSeleccionado = (Prestamo)listPrestamos.SelectedValue;
+        }
+
+        //private void listPeliculas_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+            
+        //}
     }
 }

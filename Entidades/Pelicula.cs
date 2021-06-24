@@ -51,5 +51,12 @@ namespace Entidades
         {
             return $"ID:{Id} \tTítulo:{Titulo}Año:{Anio}-Duración: {Duracion}-Cantidad de Copias:{copias.Count()}";
         }
+
+        public string DescripcionCombo
+        {
+            get => $"ID:{Id} \tTítulo:{Titulo}-Cantidad de Copias:{copias.Count}";
+            
+            //mostrar copias disponibles (del listado de prestamos, aquellas cuya copia.idPelicula = this.id y de ese listado, filtrar las abiertas, para restarlas en count totales).
+        }
     }
 }

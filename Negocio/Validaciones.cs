@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,6 +40,18 @@ namespace Negocio
             if (str != "+" && str != "-" && str != "*" && str != "/")
             {
                 throw new Exception("Operador inválido o vacío");
+            }
+        }
+
+        public static string ValidarStringNoVac(string str)
+        {
+            if (str == "")
+            {
+                throw new EmptyStringException();
+            }
+            else
+            {
+                return str;
             }
         }
     }
