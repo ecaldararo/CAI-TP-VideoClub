@@ -56,7 +56,7 @@
             // 
             this.btnApellido.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApellido.Location = new System.Drawing.Point(579, 48);
-            this.btnApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnApellido.Margin = new System.Windows.Forms.Padding(2);
             this.btnApellido.Name = "btnApellido";
             this.btnApellido.Size = new System.Drawing.Size(51, 34);
             this.btnApellido.TabIndex = 1;
@@ -68,7 +68,7 @@
             // 
             this.btnModificar.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Location = new System.Drawing.Point(28, 231);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(91, 44);
             this.btnModificar.TabIndex = 2;
@@ -91,7 +91,7 @@
             // 
             this.txtDNI.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDNI.Location = new System.Drawing.Point(147, 51);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(2);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(101, 29);
             this.txtDNI.TabIndex = 6;
@@ -101,7 +101,7 @@
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(28, 36);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(91, 58);
             this.btnAgregar.TabIndex = 3;
@@ -135,7 +135,7 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(309, 51);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(101, 29);
             this.txtNombre.TabIndex = 12;
@@ -145,7 +145,7 @@
             // 
             this.txtApellido.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.Location = new System.Drawing.Point(475, 51);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(101, 29);
             this.txtApellido.TabIndex = 13;
@@ -157,7 +157,7 @@
             this.listClientes.FormattingEnabled = true;
             this.listClientes.ItemHeight = 17;
             this.listClientes.Location = new System.Drawing.Point(147, 98);
-            this.listClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listClientes.Margin = new System.Windows.Forms.Padding(2);
             this.listClientes.Name = "listClientes";
             this.listClientes.Size = new System.Drawing.Size(607, 225);
             this.listClientes.TabIndex = 14;
@@ -167,7 +167,7 @@
             // 
             this.btnDNI.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDNI.Location = new System.Drawing.Point(250, 48);
-            this.btnDNI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDNI.Margin = new System.Windows.Forms.Padding(2);
             this.btnDNI.Name = "btnDNI";
             this.btnDNI.Size = new System.Drawing.Size(51, 34);
             this.btnDNI.TabIndex = 15;
@@ -179,7 +179,7 @@
             // 
             this.btnNombre.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNombre.Location = new System.Drawing.Point(413, 48);
-            this.btnNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNombre.Margin = new System.Windows.Forms.Padding(2);
             this.btnNombre.Name = "btnNombre";
             this.btnNombre.Size = new System.Drawing.Size(51, 34);
             this.btnNombre.TabIndex = 16;
@@ -191,7 +191,7 @@
             // 
             this.btnActualizar.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.Location = new System.Drawing.Point(662, 25);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(91, 29);
             this.btnActualizar.TabIndex = 17;
@@ -201,10 +201,11 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.Red;
             this.btnEliminar.Location = new System.Drawing.Point(28, 279);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(91, 44);
             this.btnEliminar.TabIndex = 18;
@@ -216,7 +217,7 @@
             // 
             this.btnOrdenar.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdenar.Location = new System.Drawing.Point(662, 61);
-            this.btnOrdenar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrdenar.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrdenar.Name = "btnOrdenar";
             this.btnOrdenar.Size = new System.Drawing.Size(91, 31);
             this.btnOrdenar.TabIndex = 19;
@@ -257,7 +258,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnApellido);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";

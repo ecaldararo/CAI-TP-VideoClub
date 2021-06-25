@@ -19,8 +19,10 @@ namespace VideoClubApp.Forms.AgregarModificar
         private AdmPelicula _admPeliculas;
         private AdmCliente _admClientes;
         private List<Prestamo> _listaPrestamos;
+        private List<Prestamo> _prestamosAbiertos;
         private List<Copia> _copias;
         private List<Pelicula> _peliculas;
+        private List<Pelicula> _peliculasDisponibles;
 
         public AgregarModificarPrestamo(List<Prestamo> listaPrestamos)
         {
@@ -30,9 +32,11 @@ namespace VideoClubApp.Forms.AgregarModificar
             _admPeliculas = new AdmPelicula();
             _admClientes = new AdmCliente();
             _listaPrestamos = listaPrestamos;
+            _prestamosAbiertos = new List<Prestamo>();
 
             _copias = new List<Copia>();
             _peliculas = new List<Pelicula>();
+            _peliculasDisponibles = new List<Pelicula>();
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -92,7 +96,7 @@ namespace VideoClubApp.Forms.AgregarModificar
             TraerPeliculas();
 
             cmbPelicula.DataSource = null;
-            cmbPelicula.DataSource = _peliculas;
+            cmbPelicula.DataSource = _peliculasDisponibles;
             cmbPelicula.DisplayMember = "DescripcionCombo";
         }
 
@@ -104,11 +108,31 @@ namespace VideoClubApp.Forms.AgregarModificar
                 _peliculas.Clear();
                 _copias = _admPeliculas.TraerCopias();
                 _peliculas = _admPeliculas.TraerPeliculas();
+                _prestamosAbiertos = _admPrestamo.TraerPrestamosAbiertos();
 
-                foreach (Copia c in _copias)
+                //foreach (Copia c in _copias)
+                //{
+                //    if (_peliculas.Exists(x => x.Id == c.IdPelicula))
+                //        _peliculas.FirstOrDefault(x => x.Id == c.IdPelicula).copias.Add(c);
+                //}
+
+                //List<Pelicula> _peliculasDisponibles = new List<Pelicula>();
+
+                foreach (Pelicula p in _peliculas)
                 {
-                    if (_peliculas.Exists(x => x.Id == c.IdPelicula))
-                        _peliculas.FirstOrDefault(x => x.Id == c.IdPelicula).copias.Add(c);
+                    _peliculasDisponibles.Add(p);
+                }
+
+                foreach (Pelicula p in _peliculasDisponibles)
+                {
+                    foreach (Copia c in _copias)
+                    {
+                        if (p.Id == c.IdPelicula) 
+                        {
+                            if (!_prestamosAbiertos.Exists(x => x.copia.Id == c.Id))
+                                p.copias.Add(c);
+                        }
+                    }
                 }
 
             }

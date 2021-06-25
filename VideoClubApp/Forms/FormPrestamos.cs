@@ -59,17 +59,17 @@ namespace VideoClubApp.Forms
                 _clientes = _admClientes.TraerTodos();
                 _copias = _admPeliculas.TraerCopias();
 
-                foreach (Copia c in _copias)
-                {
-                    if(_prestamos.Exists(x => x.IdCopia == c.Id))
-                        _prestamos.FirstOrDefault(x => x.IdCopia == c.Id).copia = c;
-                }
+                //foreach (Copia c in _copias)
+                //{
+                //    if(_prestamos.Exists(x => x.IdCopia == c.Id))
+                //        _prestamos.FirstOrDefault(x => x.IdCopia == c.Id).copia = c;
+                //}
 
-                foreach (Cliente cl in _clientes)
-                {
-                    if(_prestamos.Exists(x => x.IdCliente == cl.Id))
-                        _prestamos.FirstOrDefault(x => x.IdCliente == cl.Id).cliente = cl;
-                }
+                //foreach (Cliente cl in _clientes)
+                //{
+                //    if(_prestamos.Exists(x => x.IdCliente == cl.Id))
+                //        _prestamos.FirstOrDefault(x => x.IdCliente == cl.Id).cliente = cl;
+                //}
 
 
                 listPrestamos.DataSource = null;
@@ -100,13 +100,19 @@ namespace VideoClubApp.Forms
             
         }
 
-        private void btnTitulo_Click(object sender, EventArgs e)
+        public void ValidarId()
+        {
+            if (txtId.Text == "")
+                throw new Exception("Debe ingresar un Id");
+        }
+
+        private void btnIdPelicula_Click(object sender, EventArgs e)
         {
             try
             {
-                ValidarTitulo();
+                ValidarIdPelicula();
                 listPrestamos.DataSource = null;
-                listPrestamos.DataSource = _admPrestamo.TraerPorTitulo(Validaciones.ValidarInt(txtId.Text));
+                listPrestamos.DataSource = _admPrestamo.TraerPorIdPelicula(Validaciones.ValidarInt(txtIdPelicula.Text));
             }
             catch (Exception ex)
             {
@@ -114,10 +120,10 @@ namespace VideoClubApp.Forms
             }
         }
 
-        public void ValidarTitulo()
+        public void ValidarIdPelicula()
         {
-            if (txtTitulo.Text == "")
-                throw new Exception("Debe ingresar un Titulo");
+            if (txtIdPelicula.Text == "")
+                throw new Exception("Debe ingresar un ID de una Película");
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
@@ -125,9 +131,9 @@ namespace VideoClubApp.Forms
             
             try
             {
-                ValidarCliente();
+                ValidarIdCliente();
                 listPrestamos.DataSource = null;
-                //listPrestamos.DataSource = _admPrestamo.TraerPorGenero(txtCliente.Text);
+                listPrestamos.DataSource = _admPrestamo.TraerPorIdCliente(Validaciones.ValidarInt(txtCliente.Text));
             }
             catch (Exception ex)
             {
@@ -135,10 +141,10 @@ namespace VideoClubApp.Forms
             }
         }
 
-        public void ValidarCliente()
+        public void ValidarIdCliente()
         {
             if (txtCliente.Text == "")
-                throw new Exception("Debe ingresar un Cliente");
+                throw new Exception("Debe ingresar un ID de un Cliente");
         }
 
         private void btnAgregarPrestamo_Click(object sender, EventArgs e)
@@ -150,16 +156,16 @@ namespace VideoClubApp.Forms
 
         private void txtId_TextChanged(object sender, EventArgs e)
         {
-            btnId_Click(sender, e);
+            //btnId_Click(sender, e);
         }
 
         private void txtTitulo_TextChanged(object sender, EventArgs e)
         {
-            btnTitulo_Click(sender, e);
+            //btnTitulo_Click(sender, e);
         }
         private void txtCliente_TextChanged(object sender, EventArgs e)
         {
-            btnCliente_Click(sender, e);
+            //btnCliente_Click(sender, e);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -186,7 +192,15 @@ namespace VideoClubApp.Forms
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            Limpiar();
             TraerTodos();
+        }
+
+        private void Limpiar()
+        {
+            txtId.Text = "";
+            txtIdPelicula.Text = "";
+            txtCliente.Text = "";
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

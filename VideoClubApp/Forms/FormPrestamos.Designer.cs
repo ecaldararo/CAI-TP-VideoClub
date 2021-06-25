@@ -29,19 +29,17 @@
         private void InitializeComponent()
         {
             this.btnCliente = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.btnAgregarPrestamo = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtTitulo = new System.Windows.Forms.TextBox();
+            this.txtIdPelicula = new System.Windows.Forms.TextBox();
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.listPrestamos = new System.Windows.Forms.ListBox();
             this.btnId = new System.Windows.Forms.Button();
-            this.btnTítulo = new System.Windows.Forms.Button();
+            this.btnIdPelicula = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnOrdenar = new System.Windows.Forms.Button();
             this.btnRecibirPrestamo = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -58,19 +56,6 @@
             this.btnCliente.UseVisualStyleBackColor = true;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
-            // btnModificar
-            // 
-            this.btnModificar.Enabled = false;
-            this.btnModificar.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(28, 225);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(91, 45);
-            this.btnModificar.TabIndex = 2;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -78,9 +63,9 @@
             this.label1.Location = new System.Drawing.Point(143, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 18);
+            this.label1.Size = new System.Drawing.Size(96, 18);
             this.label1.TabIndex = 7;
-            this.label1.Text = "ID Préstamo";
+            this.label1.Text = "Cód. Préstamo";
             // 
             // txtId
             // 
@@ -111,9 +96,9 @@
             this.label2.Location = new System.Drawing.Point(472, 30);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 18);
+            this.label2.Size = new System.Drawing.Size(79, 18);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Cliente";
+            this.label2.Text = "Cód. Cliente";
             // 
             // label3
             // 
@@ -122,20 +107,20 @@
             this.label3.Location = new System.Drawing.Point(306, 30);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 18);
+            this.label3.Size = new System.Drawing.Size(83, 18);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Título";
+            this.label3.Text = "Cód. Película";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // txtTitulo
+            // txtIdPelicula
             // 
-            this.txtTitulo.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTitulo.Location = new System.Drawing.Point(309, 51);
-            this.txtTitulo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(101, 29);
-            this.txtTitulo.TabIndex = 12;
-            this.txtTitulo.TextChanged += new System.EventHandler(this.txtTitulo_TextChanged);
+            this.txtIdPelicula.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdPelicula.Location = new System.Drawing.Point(309, 51);
+            this.txtIdPelicula.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIdPelicula.Name = "txtIdPelicula";
+            this.txtIdPelicula.Size = new System.Drawing.Size(101, 29);
+            this.txtIdPelicula.TabIndex = 12;
+            this.txtIdPelicula.TextChanged += new System.EventHandler(this.txtTitulo_TextChanged);
             // 
             // txtCliente
             // 
@@ -171,17 +156,17 @@
             this.btnId.UseVisualStyleBackColor = true;
             this.btnId.Click += new System.EventHandler(this.btnId_Click);
             // 
-            // btnTítulo
+            // btnIdPelicula
             // 
-            this.btnTítulo.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTítulo.Location = new System.Drawing.Point(413, 48);
-            this.btnTítulo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTítulo.Name = "btnTítulo";
-            this.btnTítulo.Size = new System.Drawing.Size(51, 34);
-            this.btnTítulo.TabIndex = 16;
-            this.btnTítulo.Text = "Buscar";
-            this.btnTítulo.UseVisualStyleBackColor = true;
-            this.btnTítulo.Click += new System.EventHandler(this.btnTitulo_Click);
+            this.btnIdPelicula.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIdPelicula.Location = new System.Drawing.Point(413, 48);
+            this.btnIdPelicula.Margin = new System.Windows.Forms.Padding(2);
+            this.btnIdPelicula.Name = "btnIdPelicula";
+            this.btnIdPelicula.Size = new System.Drawing.Size(51, 34);
+            this.btnIdPelicula.TabIndex = 16;
+            this.btnIdPelicula.Text = "Buscar";
+            this.btnIdPelicula.UseVisualStyleBackColor = true;
+            this.btnIdPelicula.Click += new System.EventHandler(this.btnIdPelicula_Click);
             // 
             // btnActualizar
             // 
@@ -194,20 +179,6 @@
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Enabled = false;
-            this.btnEliminar.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.Red;
-            this.btnEliminar.Location = new System.Drawing.Point(28, 274);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(91, 46);
-            this.btnEliminar.TabIndex = 18;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnOrdenar
             // 
@@ -241,19 +212,17 @@
             this.ClientSize = new System.Drawing.Size(788, 366);
             this.Controls.Add(this.btnRecibirPrestamo);
             this.Controls.Add(this.btnOrdenar);
-            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.btnTítulo);
+            this.Controls.Add(this.btnIdPelicula);
             this.Controls.Add(this.btnId);
             this.Controls.Add(this.listPrestamos);
             this.Controls.Add(this.txtCliente);
-            this.Controls.Add(this.txtTitulo);
+            this.Controls.Add(this.txtIdPelicula);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnAgregarPrestamo);
-            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnCliente);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormPrestamos";
@@ -268,19 +237,17 @@
         #endregion
 
         private System.Windows.Forms.Button btnCliente;
-        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btnAgregarPrestamo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtTitulo;
+        private System.Windows.Forms.TextBox txtIdPelicula;
         private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.ListBox listPrestamos;
         private System.Windows.Forms.Button btnId;
-        private System.Windows.Forms.Button btnTítulo;
+        private System.Windows.Forms.Button btnIdPelicula;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnOrdenar;
         private System.Windows.Forms.Button btnRecibirPrestamo;
     }

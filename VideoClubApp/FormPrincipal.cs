@@ -28,6 +28,11 @@ namespace VideoClubApp
             _formApps = form;
         }
 
+        public FormPrincipal()
+        {
+            InitializeComponent();
+        }
+
         private void abrirFormInteractivo(Form formHijo, object botonSender)
         {
             if(formActivo != null)
@@ -82,7 +87,7 @@ namespace VideoClubApp
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            _formApps.Show();
+            //_formApps.Show();
         }
     }
 }

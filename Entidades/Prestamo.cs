@@ -71,7 +71,7 @@ namespace Entidades
             if (Abierto == true)
                 estado = "Abierto";
 
-            return $"ID{Id}) IDPelícula: {copia.IdPelicula} - Plazo:{Plazo} - Estado:{estado} - Fecha del Préstamo:{FechaPrestamo.ToString("yyyy-MM-dd")}";
+            return $"Cód.{Id}) | Cód. Película: {copia.IdPelicula} | Cód. Cliente: {cliente.Id} | Plazo:{Plazo} - Estado:{estado} - Fecha del Préstamo:{FechaPrestamo.ToString("yyyy-MM-dd")}";
         }
     }
 }

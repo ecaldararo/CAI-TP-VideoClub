@@ -25,7 +25,7 @@ namespace Entidades
         {
             //id += 1;
             Id = _id;
-            _idCliente = dni;
+            _idCliente = _id;
             _dni = dni;
             _nombre = nombre;
             _apellido = apellido;
