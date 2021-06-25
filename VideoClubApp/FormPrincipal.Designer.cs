@@ -176,7 +176,7 @@ namespace VideoClubApp
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.panelIzquierdo);
             this.Name = "FormPrincipal";
-            this.Text = "Form1";
+            this.Text = "The Android’s Dungeon & Movies";
             this.panelIzquierdo.ResumeLayout(false);
             this.panelIzquierdo.PerformLayout();
             this.panelSuperior.ResumeLayout(false);

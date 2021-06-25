@@ -223,8 +223,9 @@ namespace VideoClubApp.Forms
         {
             try
             {
-                listPrestamos.DataSource = null;
+                //listPrestamos.DataSource = null;
                 //listPrestamos.DataSource = _admPrestam/*o.TraerTodosOrdenadosPorId();*/
+                throw new NotImplementedException();
             }
             catch (Exception ex)
             {
@@ -242,9 +243,5 @@ namespace VideoClubApp.Forms
             _prestamoSeleccionado = (Prestamo)listPrestamos.SelectedValue;
         }
 
-        //private void listPeliculas_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-            
-        //}
     }
 }
