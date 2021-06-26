@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormApps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormApps.Designer.cs">
+      <DependentUpon>FormApps.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,11 +76,23 @@
     <Compile Include="Forms\AgregarModificar\AgregarModificarPelicula.Designer.cs">
       <DependentUpon>AgregarModificarPelicula.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AgregarModificar\DevolucionPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AgregarModificar\DevolucionPrestamo.Designer.cs">
+      <DependentUpon>DevolucionPrestamo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AgregarModificar\AgregarModificarPrestamo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AgregarModificar\AgregarModificarPrestamo.Designer.cs">
       <DependentUpon>AgregarModificarPrestamo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormPrestamos.Designer.cs">
+      <DependentUpon>FormPrestamos.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormPeliculas.cs">
       <SubType>Form</SubType>
@@ -88,14 +106,17 @@
     <Compile Include="Forms\FormClientes.Designer.cs">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormPeliculas2.cs">
+    <Compile Include="Forms\FormReportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormPeliculas2.Designer.cs">
-      <DependentUpon>FormPeliculas2.cs</DependentUpon>
+    <Compile Include="Forms\FormReportes.Designer.cs">
+      <DependentUpon>FormReportes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormApps.resx">
+      <DependentUpon>FormApps.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,14 +129,23 @@
     <EmbeddedResource Include="Forms\AgregarModificar\AgregarModificarPelicula.resx">
       <DependentUpon>AgregarModificarPelicula.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AgregarModificar\DevolucionPrestamo.resx">
+      <DependentUpon>DevolucionPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AgregarModificar\AgregarModificarPrestamo.resx">
+      <DependentUpon>AgregarModificarPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormPrestamos.resx">
+      <DependentUpon>FormPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormPeliculas.resx">
       <DependentUpon>FormPeliculas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormPeliculas2.resx">
-      <DependentUpon>FormPeliculas2.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormReportes.resx">
+      <DependentUpon>FormReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -126,6 +156,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\Datos.ClientMapper.datasource" />
+    <None Include="Properties\DataSources\Negocio.AdmCliente.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -152,6 +184,9 @@
       <Project>{690b6e5e-8eff-4ffe-9b4c-dcd2ead15c31}</Project>
       <Name>Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

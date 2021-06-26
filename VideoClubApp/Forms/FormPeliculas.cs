@@ -18,7 +18,6 @@ namespace VideoClubApp.Forms
     {
         private AdmPelicula _admPelicula;
         private List<Pelicula> _peliculas;
-        private Pelicula _pelicula;
         private Pelicula _peliculaSeleccionada;
         private List<Copia> _copias;
         public FormPeliculas()
@@ -56,7 +55,8 @@ namespace VideoClubApp.Forms
 
                 foreach (Copia c in _copias)
                 {
-                    _peliculas.FirstOrDefault(x => x.Id == c.IdPelicula).copias.Add(c);
+                    if (_peliculas.Exists(x => x.Id == c.IdPelicula))
+                        _peliculas.FirstOrDefault(x => x.Id == c.IdPelicula).copias.Add(c);
                 }
 
                 // mal, porque agrega 1 copia por pelicula
@@ -79,27 +79,24 @@ namespace VideoClubApp.Forms
             _peliculaSeleccionada = (Pelicula)listPeliculas.SelectedValue;
         }
 
-        private void btnDNI_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                listPeliculas.DataSource = null;
-                listPeliculas.DataSource = _admPelicula.TraerPorCodigo(Validaciones.ValidarInt(txtCodigo.Text));
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            
-        }
 
-        private void btnNombre_Click(object sender, EventArgs e)
+        // BUSCADOR
+
+        private void btnCodigo_Click(object sender, EventArgs e)
         {
             try
             {
-                ValidarNombre();
-                listPeliculas.DataSource = null;
-                listPeliculas.DataSource = _admPelicula.TraerPorTitulo(txtTitulo.Text);
+                ValidarCodigo();
+                _peliculas = _admPelicula.TraerPorCodigo(Validaciones.ValidarInt(txtCodigo.Text));
+                if (_peliculas.SingleOrDefault() is null)
+                {
+                    MessageBox.Show("No hay películas por el código seleccionado.");
+                }
+                else
+                {
+                    listPeliculas.DataSource = null;
+                    listPeliculas.DataSource = _peliculas;
+                }
             }
             catch (Exception ex)
             {
@@ -107,32 +104,86 @@ namespace VideoClubApp.Forms
             }
         }
 
-        public void ValidarNombre()
+        private void btnTitulo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ValidarTitulo();
+                _peliculas = _admPelicula.TraerPorTitulo(txtTitulo.Text);
+                if (_peliculas.SingleOrDefault() is null)
+                {
+                    MessageBox.Show("No hay películas por el título seleccionado.");
+                }
+                else
+                {
+                    listPeliculas.DataSource = null;
+                    listPeliculas.DataSource = _peliculas;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnGenero_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ValidarGenero();
+                _peliculas = _admPelicula.TraerPorGenero(txtGenero.Text);
+                if (_peliculas.SingleOrDefault() is null)
+                {
+                    MessageBox.Show("No hay películas por el género seleccionado.");
+                }
+                else
+                {
+                    listPeliculas.DataSource = null;
+                    listPeliculas.DataSource = _peliculas;
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void ValidarCodigo()
+        {
+            if (txtCodigo.Text == "")
+                throw new Exception("Debe ingresar un Código");
+        }
+
+        public void ValidarTitulo()
         {
             if (txtTitulo.Text == "")
-                throw new Exception("Debe ingresar un Nombre");
+                throw new Exception("Debe ingresar un Título");
         }
 
-        private void btnApellido_Click(object sender, EventArgs e)
-        {
-            
-            try
-            {
-                ValidarApellido();
-                listPeliculas.DataSource = null;
-                listPeliculas.DataSource = _admPelicula.TraerPorGenero(txtGenero.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        public void ValidarApellido()
+        public void ValidarGenero()
         {
             if (txtGenero.Text == "")
-                throw new Exception("Debe ingresar un Apellido");
+                throw new Exception("Debe ingresar un Genero");
         }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            //btnCodigo_Click(sender, e);
+        }
+
+        private void txtTitulo_TextChanged(object sender, EventArgs e)
+        {
+            //btnTitulo_Click(sender, e);
+        }
+
+        private void txtGenero_TextChanged(object sender, EventArgs e)
+        {
+            //btnGenero_Click(sender, e);
+        }
+
+
+        // BOTONES ABM
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -140,22 +191,6 @@ namespace VideoClubApp.Forms
             frm.Owner = this;
             frm.Show();
         }
-
-        private void txtGenero_TextChanged(object sender, EventArgs e)
-        {
-            btnApellido_Click(sender, e);
-        }
-
-        private void txtCodigo_TextChanged(object sender, EventArgs e)
-        {
-            btnDNI_Click(sender, e);
-        }
-
-        private void txtTitulo_TextChanged(object sender, EventArgs e)
-        {
-            btnNombre_Click(sender, e);
-        }
-
         private void btnModificar_Click(object sender, EventArgs e)
         {
             if(listPeliculas.SelectedValue!=null)
@@ -197,13 +232,14 @@ namespace VideoClubApp.Forms
             try
             {
                 listPeliculas.DataSource = null;
-                listPeliculas.DataSource = _admPelicula.TraerTodosOrdenadosPorId();
+                listPeliculas.DataSource = _admPelicula.TraerTodosOrdenadosPorTitulo();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+               
 
         private void btnAgregarCopia_Click(object sender, EventArgs e)
         {
@@ -211,5 +247,12 @@ namespace VideoClubApp.Forms
             frm.Owner = this;
             frm.Show();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

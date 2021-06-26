@@ -1,6 +1,0 @@
-H:\Escritorio\GitHub\CAI-TP-Peliculas\Entidades\bin\Debug\Entidades.dll
-H:\Escritorio\GitHub\CAI-TP-Peliculas\Entidades\bin\Debug\Entidades.pdb
-H:\Escritorio\GitHub\CAI-TP-Peliculas\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
-H:\Escritorio\GitHub\CAI-TP-Peliculas\Entidades\obj\Debug\Entidades.dll
-H:\Escritorio\GitHub\CAI-TP-Peliculas\Entidades\obj\Debug\Entidades.pdb
-H:\Escritorio\GitHub\CAI-TP-Peliculas\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache

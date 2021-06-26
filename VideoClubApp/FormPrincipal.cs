@@ -19,8 +19,15 @@ namespace VideoClubApp
         private Form formPeliculas;
         private Form formPrestamos;
         private Form formClientes;
+        private Form formReportes;
+        private FormApps _formApps;
 
-        private AdmCliente _admCliente;
+        public FormPrincipal(FormApps form)
+        {
+            InitializeComponent();
+            _formApps = form;
+        }
+
         public FormPrincipal()
         {
             InitializeComponent();
@@ -45,8 +52,8 @@ namespace VideoClubApp
 
         private void botonPrestamos_Click(object sender, EventArgs e)
         {
-            //formPrestamos = new FormPrestamos();
-            //abrirFormInteractivo(formPrestamos, sender);
+            formPrestamos = new FormPrestamos();
+            abrirFormInteractivo(formPrestamos, sender);
         }
 
         private void panelInteraccion_Paint(object sender, PaintEventArgs e)
@@ -69,6 +76,18 @@ namespace VideoClubApp
         private void tituloPrincipal_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void botonReportes_Click(object sender, EventArgs e)
+        {
+            formReportes = new FormReportes();
+            abrirFormInteractivo(formReportes, sender);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            //_formApps.Show();
         }
     }
 }

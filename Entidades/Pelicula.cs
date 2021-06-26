@@ -49,7 +49,16 @@ namespace Entidades
 
         public override string ToString()
         {
-            return $"ID:{Id} \tTítulo:{Titulo}Año:{Anio}-Duración: {Duracion}-Cantidad de Copias:{copias.Count()}";
+            return $"Cód.: {Id} \tTítulo: {Titulo}\t\tAño:{Anio}\tDur.:{Duracion}mins.\t-Copias Tot.: {copias.Count()}";
         }
+
+        public string DescripcionCombo
+        {
+            get => $"Código: {Id} \t{Titulo} \t #Copias Disp.: {copias.Count}";
+            
+            //mostrar copias disponibles (del listado de prestamos, aquellas cuya copia.idPelicula = this.id y de ese listado, filtrar las abiertas, para restarlas en count totales).
+        }
+
+        
     }
 }

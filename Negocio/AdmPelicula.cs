@@ -12,9 +12,11 @@ namespace Negocio
     {
         private PeliculaMapper _peliculaMapper;
         private Pelicula _pelicula;
+        private List<Pelicula> _peliculas;
         public AdmPelicula()
         {
             _peliculaMapper = new PeliculaMapper();
+            _peliculas = new List<Pelicula>();
         }
 
         public void Alta(Pelicula pel)
@@ -22,18 +24,17 @@ namespace Negocio
             _peliculaMapper.Insertar(pel);
         }
 
-        public string AgregarCopia(Copia nuevaCopia)
+        public int AgregarCopia(Copia nuevaCopia)
         {
             TransactionResult rdo =_peliculaMapper.InsertarCopia(nuevaCopia);
 
-            if (rdo.IsOk == false)
+            if (rdo.IsOk == true)
             {
-                throw new Exception("Error al agregar copia");
+                return 1;
             } else
             {
-                return "Copia Agregada exitosamente";
+                return 0;
             }
-            
 
         }
 
@@ -60,26 +61,49 @@ namespace Negocio
             throw new NotImplementedException();
         }
 
-        public object TraerTodosOrdenadosPorId()
+        public List<Pelicula> TraerTodosOrdenadosPorTitulo()
         {
-            throw new NotImplementedException();
+            _peliculas = TraerPeliculas();
+
+            List<Pelicula> _peliculasOrdenadas = new List<Pelicula>();
+            
+            _peliculasOrdenadas = _peliculas.OrderBy(x => x.Titulo).ToList();
+
+            return _peliculasOrdenadas;
+
         }
 
-        public object TraerPorGenero(string text)
+        public List<Pelicula> TraerPorGenero(string text)
         {
-            throw new NotImplementedException();
+            _peliculas = TraerPeliculas();
+
+            List<Pelicula> _peliculasSeleccionadas = new List<Pelicula>();
+
+            _peliculasSeleccionadas = _peliculas.Where(x => x.Genero == text).ToList();
+
+            return _peliculasSeleccionadas;
         }
 
-        public object TraerPorTitulo(string text)
+        public List<Pelicula> TraerPorTitulo(string text)
         {
-            throw new NotImplementedException();
+            _peliculas = TraerPeliculas();
+
+            List<Pelicula> _peliculasSeleccionadas = new List<Pelicula>();
+
+            _peliculasSeleccionadas = _peliculas.Where(x => x.Titulo == text).ToList();
+
+            return _peliculasSeleccionadas;
         }
 
-        
-
-        public object TraerPorCodigo(int v)
+        public List<Pelicula> TraerPorCodigo(int cod)
         {
-            throw new NotImplementedException();
+            _peliculas = TraerPeliculas();
+
+            List<Pelicula> _peliculasSeleccionadas = new List<Pelicula>();
+
+            _peliculasSeleccionadas = _peliculas.Where(x => x.Id == cod).ToList();
+
+            return _peliculasSeleccionadas;
         }
     }
 }

@@ -56,6 +56,24 @@ namespace Negocio
 
         }
 
+        public object TraerPorNombre(string nombre)
+        {
+            _clientes = _clientMapper.TraerTodos();
+
+            List<Cliente> _clientesFiltrados = new List<Cliente>();
+
+            // int largo = nombre.Length; // Para filtro por nombres parciales
+
+            if (_clientes.Count() > 0)
+            {
+                _clientesFiltrados.AddRange(_clientes.Where(x => x.Nombre == nombre));
+            }
+            else
+                throw new Exception("No hay clientes.");
+
+            return _clientesFiltrados;
+        }
+
         public List<Cliente> TraerPorApellido(string apellido)
         {
             // _clientes = _clientMapper.TraerTodos(); // Consulta al servidor al cargar el formulario, y lo guarda y trabaja sobre ese.
@@ -75,12 +93,12 @@ namespace Negocio
 
         public TransactionResult Agregar(int dni,string nombre, string apellido,string direccion, DateTime fechaNac, bool activo)
         {
-            Cliente nuevoCliente = new Cliente();
-            nuevoCliente.Dni = dni;
-            nuevoCliente.Nombre = nombre;
-            nuevoCliente.Apellido = apellido;   
-            nuevoCliente.Direccion = direccion;
-            nuevoCliente.FechaNacimiento = fechaNac;
+            Cliente nuevoCliente = new Cliente(dni,nombre,apellido,direccion,fechaNac);
+            //nuevoCliente.Dni = dni;
+            //nuevoCliente.Nombre = nombre;
+            //nuevoCliente.Apellido = apellido;   
+            //nuevoCliente.Direccion = direccion;
+            //nuevoCliente.FechaNacimiento = fechaNac;
             nuevoCliente.Activo = activo;
 
             return _clientMapper.Insertar(nuevoCliente);
@@ -91,21 +109,7 @@ namespace Negocio
             return _clientMapper.Actualizar(clienteAModificar);
         }
 
-        public object TraerPorNombre(string nombre)
-        {
-            _clientes = _clientMapper.TraerTodos();
-
-            List<Cliente> _clientesFiltrados = new List<Cliente>();
-
-            if (_clientes.Count() > 0)
-            {
-                _clientesFiltrados.AddRange(_clientes.Where(x => x.Nombre == nombre));
-            }
-            else
-                throw new Exception("No hay clientes.");
-
-            return _clientesFiltrados;
-        }
+        
 
         public TransactionResult Eliminar(Cliente clienteSeleccionado)
         {

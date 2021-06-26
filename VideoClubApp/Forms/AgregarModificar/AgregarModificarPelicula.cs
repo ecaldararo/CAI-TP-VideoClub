@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio;
 using Entidades;
+using Entidades.Exceptions;
 
 namespace VideoClubApp.Forms.AgregarModificar
 {
     public partial class AgregarModificarPelicula : Form
     {
-        private FormPeliculas2 formPeliculas;
+        private FormPeliculas formPeliculas;
         private AdmPelicula _admPelicula;
 
         private Pelicula _pelicula;
@@ -22,6 +23,7 @@ namespace VideoClubApp.Forms.AgregarModificar
         public AgregarModificarPelicula()
         {
             InitializeComponent();
+            _admPelicula = new AdmPelicula();
         }
 
         public AgregarModificarPelicula(Pelicula pelicula)
@@ -45,13 +47,17 @@ namespace VideoClubApp.Forms.AgregarModificar
                 Pelicula pel = new Pelicula();
                 pel.Anio = Validaciones.ValidarInt(txtAnio.Text);
                 pel.Duracion = Validaciones.ValidarInt(txtDuracion.Text);
-                pel.Titulo = txtTitulo.Text;
+                pel.Titulo = Validaciones.ValidarStringNoVac(txtTitulo.Text);
                 pel.Director = txtDirector.Text;
                 pel.Productora = txtProductora.Text;
                 pel.Genero = txtGenero.Text;
                 _admPelicula.Alta(pel);
                 MessageBox.Show(pel.Titulo + " agregada");
 
+            }
+            catch (EmptyStringException esex)
+            {
+                MessageBox.Show(esex.Message);
             }
             catch (Exception ex)
             {
@@ -65,8 +71,8 @@ namespace VideoClubApp.Forms.AgregarModificar
                 throw new Exception("Año Vacío");
             if (txtDuracion.Text == "")
                 throw new Exception("Duración Vacío");
-            //if (txtTitulo.Text == "")
-            //    throw new Exception("Título Vacío");
+            if (txtTitulo.Text == "")
+                throw new Exception("Título Vacío");
             //if (txtDirector.Text == "")
             //    throw new Exception("Director Vacío");
             //if (txtProductora.Text == "")
@@ -75,6 +81,11 @@ namespace VideoClubApp.Forms.AgregarModificar
             //    throw new Exception("Genero Vacío");
             //if (txtId.Text == "")
             //    throw new Exception("Id Vacío");
+        }
+
+        private void AgregarModificarPelicula_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

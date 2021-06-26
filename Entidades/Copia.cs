@@ -25,20 +25,25 @@ namespace Entidades
 
         public Copia()
         {
-            
+            fechaAlta = DateTime.Now;
+        }
+        public Copia(string obs)
+        {
+            fechaAlta = DateTime.Now;
+            observaciones = obs;
         }
 
         [DataMember(Name="idPelicula")]
         public int IdPelicula { get => idPelicula; set => idPelicula = value; }
 
         [DataMember(Name = "observaciones")]
-        public string Observaciones { get => observaciones; set => observaciones = value; }
+        public string Observaciones { get => observaciones;  }
         
         [DataMember(Name = "precio")]
         public double Precio { get => precio; set => precio = value; }
         
         [DataMember(Name = "fechaAlta")]
-        public DateTime FechaAlta { get => fechaAlta; set => fechaAlta = value; }
+        public DateTime FechaAlta { get => fechaAlta; }
         
         [DataMember(Name = "id")]
         public int Id { get => id; set => id = value; }

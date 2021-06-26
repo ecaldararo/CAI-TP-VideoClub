@@ -30,11 +30,6 @@ namespace VideoClubApp.Forms
 
         }
 
-        //private void button4_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
         private void FormClientes_Load(object sender, EventArgs e)
         {
             TraerTodos();
@@ -121,17 +116,20 @@ namespace VideoClubApp.Forms
 
         private void txtApellido_TextChanged(object sender, EventArgs e)
         {
-            btnApellido_Click(sender, e);
+            if (txtApellido.TextLength > 2)
+                btnApellido_Click(sender, e);
         }
 
         private void txtDNI_TextChanged(object sender, EventArgs e)
         {
-            btnDNI_Click(sender, e);
+            if(txtDNI.TextLength > 2)
+                btnDNI_Click(sender, e);
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            btnNombre_Click(sender, e);
+            if (txtNombre.TextLength > 2)
+                btnNombre_Click(sender, e);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -181,6 +179,11 @@ namespace VideoClubApp.Forms
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
