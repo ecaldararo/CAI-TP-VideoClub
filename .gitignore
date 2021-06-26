@@ -1,0 +1,8 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/Datos/obj/Release/.NETFramework,Version=v4.5.2.AssemblyAttributes.cs
+/Entidades/obj/Release/.NETFramework,Version=v4.5.2.AssemblyAttributes.cs
+/Negocio/obj/Release/.NETFramework,Version=v4.5.2.AssemblyAttributes.cs
+/VideoClubApp/obj/Release/VideoClubApp.csprojAssemblyReference.cache
