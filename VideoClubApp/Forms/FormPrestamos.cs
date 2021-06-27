@@ -52,25 +52,8 @@ namespace VideoClubApp.Forms
             try
             {
                 _prestamos.Clear();
-                _copias.Clear();
-                _clientes.Clear();
 
                 _prestamos = _admPrestamo.TraerPrestamos();
-                _clientes = _admClientes.TraerTodos();
-                _copias = _admPeliculas.TraerCopias();
-
-                //foreach (Copia c in _copias)
-                //{
-                //    if(_prestamos.Exists(x => x.IdCopia == c.Id))
-                //        _prestamos.FirstOrDefault(x => x.IdCopia == c.Id).copia = c;
-                //}
-
-                //foreach (Cliente cl in _clientes)
-                //{
-                //    if(_prestamos.Exists(x => x.IdCliente == cl.Id))
-                //        _prestamos.FirstOrDefault(x => x.IdCliente == cl.Id).cliente = cl;
-                //}
-
 
                 listPrestamos.DataSource = null;
                 listPrestamos.DataSource = _prestamos;
@@ -192,7 +175,6 @@ namespace VideoClubApp.Forms
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            Limpiar();
             TraerTodos();
         }
 

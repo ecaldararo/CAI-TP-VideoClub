@@ -24,6 +24,7 @@ namespace Entidades
 
         public Copia copia;
         public Cliente cliente;
+        public Pelicula pelicula;
 
         private int idCopia;
         private int idCliente;
@@ -38,6 +39,7 @@ namespace Entidades
         {
             copia = new Copia();
             cliente = new Cliente();
+            pelicula = new Pelicula();
         }
 
         [DataMember]
@@ -71,7 +73,7 @@ namespace Entidades
             if (Abierto == true)
                 estado = "Abierto";
 
-            return $"Cód.{Id}) | Cód. Película: {copia.IdPelicula} | Cód. Cliente: {cliente.Id} | Plazo:{Plazo} - Estado:{estado} - Fecha del Préstamo:{FechaPrestamo.ToString("yyyy-MM-dd")}";
+            return $"Cód.{Id}) | Película: {pelicula.Id}-{pelicula.Titulo} | Cliente: {cliente.Id}-{cliente.Apellido} | Plazo:{Plazo} - Estado:{estado} - Fecha del Préstamo:{FechaPrestamo.ToString("yyyy-MM-dd")}";
         }
     }
 }
