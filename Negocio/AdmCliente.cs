@@ -82,7 +82,7 @@ namespace Negocio
 
             if (_clientes.Count() > 0)
             {
-                _clientesFiltrados.AddRange(_clientes.Where(x => x.Apellido == apellido));
+                _clientesFiltrados.AddRange(_clientes.Where(x => !string.IsNullOrEmpty(x.Apellido) && x.Apellido.Contains(apellido)));
             }
             else
                 throw new Exception("No hay clientes.");
