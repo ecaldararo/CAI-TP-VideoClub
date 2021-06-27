@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using Negocio;
 using Entidades;
 using VideoClubApp.Forms.AgregarModificar;
-using Datos;
 
 namespace VideoClubApp.Forms
 {
@@ -19,24 +18,14 @@ namespace VideoClubApp.Forms
         private AdmPrestamo _admPrestamo;
         private List<Prestamo> _prestamos;
 
-        private AdmPelicula _admPeliculas;
-        private List<Copia> _copias;
-
-        private AdmCliente _admClientes;
-        private List<Cliente> _clientes;
-
         private Prestamo _prestamoSeleccionado;
         public FormPrestamos()
         {
             InitializeComponent();
 
             _admPrestamo = new AdmPrestamo();
-            _admClientes = new AdmCliente();
-            _admPeliculas = new AdmPelicula();
 
             _prestamos = new List<Prestamo>();
-            _copias = new List<Copia>();
-            _clientes = new List<Cliente>();
 
             _prestamoSeleccionado = new Prestamo();
 

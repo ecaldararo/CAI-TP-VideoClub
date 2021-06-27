@@ -110,14 +110,6 @@ namespace VideoClubApp.Forms.AgregarModificar
                 _peliculas = _admPeliculas.TraerPeliculas();
                 _prestamosAbiertos = _admPrestamo.TraerPrestamosAbiertos();
 
-                //foreach (Copia c in _copias)
-                //{
-                //    if (_peliculas.Exists(x => x.Id == c.IdPelicula))
-                //        _peliculas.FirstOrDefault(x => x.Id == c.IdPelicula).copias.Add(c);
-                //}
-
-                //List<Pelicula> _peliculasDisponibles = new List<Pelicula>();
-
                 foreach (Pelicula p in _peliculas)
                 {
                     _peliculasDisponibles.Add(p);

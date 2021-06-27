@@ -35,15 +35,11 @@ namespace VideoClubApp.Forms.AgregarModificar
         {
             try
             {
-                //if (_prestamoADevolver.FechaDevolucionTentativa == Convert.ToDateTime("0001-01-01T00:00:00"))
-                //    dateTimeDevolucion.Value = DateTime.Now;
-                //else
-                    dateTimeDevolucion.Value = _prestamoADevolver.FechaDevolucionTentativa;
+                dateTimeDevolucion.Value = _prestamoADevolver.FechaDevolucionTentativa;
             }
             catch (Exception)
             {
                 dateTimeDevolucion.Value = DateTime.Now;
-                //MessageBox.Show(ex.Message);
             }
 
         }

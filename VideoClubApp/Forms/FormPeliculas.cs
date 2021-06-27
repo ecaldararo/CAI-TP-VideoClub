@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using Negocio;
 using Entidades;
 using VideoClubApp.Forms.AgregarModificar;
-using Datos;
 
 namespace VideoClubApp.Forms
 {
@@ -33,9 +32,7 @@ namespace VideoClubApp.Forms
 
         private void FormPeliculas_Load(object sender, EventArgs e)
         {
-            
             TraerTodos();
-
         }
 
         private void TraerTodos()
@@ -46,12 +43,6 @@ namespace VideoClubApp.Forms
                 _peliculas.Clear();
                 _copias = _admPelicula.TraerCopias();
                 _peliculas = _admPelicula.TraerPeliculas();
-
-                //foreach (Copia c in _copias)
-                //{
-                //    if (_peliculas.Exists(x => x.Id == c.IdPelicula))
-                //        _peliculas.FirstOrDefault(x => x.Id == c.IdPelicula).copias.Add(c);
-                //}
 
                 foreach (Copia c in _copias)
                 {
