@@ -50,6 +50,7 @@
     <Compile Include="PeliculaMapper.cs" />
     <Compile Include="ClientMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UtilidadesMapper.cs" />
     <Compile Include="WebHelper.cs" />
   </ItemGroup>
   <ItemGroup>

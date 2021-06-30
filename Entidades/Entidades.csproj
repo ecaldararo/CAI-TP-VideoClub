@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Cliente.cs" />
     <Compile Include="Copia.cs" />
+    <Compile Include="Email.cs" />
     <Compile Include="Exceptions\NoHayCopiasDisponiblesException.cs" />
     <Compile Include="Exceptions\EmptyStringException.cs" />
     <Compile Include="Pelicula.cs" />

@@ -11,6 +11,8 @@ namespace Negocio
     public class AdmPrestamo
     {
         private PrestamoMapper _prestamoMapper;
+        private UtilidadesMapper _utilidadesMapper;
+
         private AdmPelicula _admPelicula;
         private AdmCliente _admCliente;
 
@@ -18,6 +20,8 @@ namespace Negocio
         public AdmPrestamo()
         {
             _prestamoMapper = new PrestamoMapper();
+            _utilidadesMapper = new UtilidadesMapper();
+
             _admCliente = new AdmCliente();
             _admPelicula = new AdmPelicula();
 
@@ -30,6 +34,14 @@ namespace Negocio
         public void Alta(Prestamo pre)
         {
             _prestamoMapper.Insertar(pre);
+            EnviarEmail(pre);
+        }
+
+        private void EnviarEmail(Prestamo pre)
+        {
+            pre.cliente.Email = "cai825551@yopmail.com";
+            Email email = new Email(pre.cliente.Email, "VideoClub - Prestamo Película" + pre.pelicula.Titulo.ToString() + " entregada", $"Título:{pre.pelicula.Titulo} \nGénero:{pre.pelicula.Genero} \nEstreno:{pre.pelicula.Anio} \nDir:{pre.pelicula.Director} \nDur.{pre.pelicula.Duracion}min.");
+            _utilidadesMapper.Insertar(email);
         }
 
         public List<Prestamo> TraerPrestamos()

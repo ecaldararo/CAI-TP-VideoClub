@@ -72,6 +72,7 @@ namespace VideoClubApp.Forms.AgregarModificar
                 if (encontro == false)
                     throw new NoHayCopiasDisponiblesException();
 
+                alta.pelicula = peliculaSeleccionada;
                 alta.IdCliente = ((Cliente)cmbCliente.SelectedItem).Id;
                 alta.Plazo = Validaciones.ValidarInt(txtPlazo.Text);
                 alta.FechaPrestamo = dateTimePrestamo.Value;

@@ -16,6 +16,8 @@ namespace Entidades
         private DateTime _fechaAlta;
         private bool _activo;
 
+        private string _email;
+
         public Cliente()
         {
             // Cliente sin parámetros para hacer el post?
@@ -72,5 +74,6 @@ namespace Entidades
         {
             get => $"Id:{Id})  {Apellido}, {Nombre}";
         }
+        public string Email { get => _email; set => _email = value; }
     }
 }
